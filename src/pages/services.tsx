@@ -12,11 +12,11 @@ import Testimonials from "~/components/Testimonials";
 import InfoSec from "~/components/InfoSec";
 import Button from "~/components/ui/Button";
 import servicesqualityData from "~/data/servicesqualityData";
-import UseRQGlobalState from "~/utils/useRQGlobalState";
+import useRQGlobalState from "~/utils/useRQGlobalState";
 
 const services = () => {
 
-  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
 
   const infoSecData = [
     {

@@ -9,7 +9,7 @@ import Header from "~/components/Header/Header";
 import MyModal from "~/components/MyModal";
 import ServicesContact from "~/components/ServicesContact";
 import Testimonials from "~/components/Testimonials";
-import InfoSec from "~/components/infoSec";
+import InfoSec from "~/components/InfoSec";
 import Button from "~/components/ui/Button";
 import useRQGlobalState from "~/utils/useRQGlobalState";
 

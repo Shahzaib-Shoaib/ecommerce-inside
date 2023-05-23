@@ -9,7 +9,7 @@ import GetStarted from "~/components/GetStarted";
 import Header from "~/components/Header/Header";
 import AboutStrategySlider from "~/components/Slider/AboutStrategySlider";
 import Testimonials from "~/components/Testimonials";
-import InfoSec from "~/components/infoSec";
+import InfoSec from "~/components/InfoSec";
 import Button from "~/components/ui/Button";
 import MyModal from "~/components/MyModal";
 // import aboutchooseData from "~/data/aboutchooseData";

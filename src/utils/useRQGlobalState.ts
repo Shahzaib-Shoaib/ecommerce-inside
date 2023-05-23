@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import client from "./client"
 
-const useRQGlobalState = (key:string, initialData:boolean) => [
+const UseRQGlobalState = (key:string, initialData:boolean) => [
     useQuery([key],() => initialData,
     {enabled:false,initialData}
     ).data,
@@ -9,4 +9,4 @@ const useRQGlobalState = (key:string, initialData:boolean) => [
 ]
 
 
-export default useRQGlobalState
+export default UseRQGlobalState

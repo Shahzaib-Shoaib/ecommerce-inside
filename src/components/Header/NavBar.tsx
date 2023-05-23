@@ -5,12 +5,12 @@ import Link from 'next/link';
 import navlinks from '~/data/navlinks';
 import MobileMenu from './MobileMenu';
 import Button from '../ui/Button';
-import useRQGlobalState from '~/utils/useRQGlobalState';
+import UseRQGlobalState from '~/utils/useRQGlobalState';
 import CollisionButton from '../ui/CollisionButton';
 
 const NavBar: FC = () => {
 
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
 
   const [color, setColor] = useState(false)
   const changeColor =() => {

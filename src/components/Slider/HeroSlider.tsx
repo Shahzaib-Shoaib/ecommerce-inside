@@ -5,14 +5,14 @@ import SwiperCore, { Autoplay, Navigation,Pagination,A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import Button from "../ui/Button";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 import Heading1 from "../ui/Heading1";
 import Paragraph from "../ui/Paragraph";
 import CollisionButton from "../ui/CollisionButton";
 import 'swiper/css/pagination';
 
 const HeroSlider: FC = () => {
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const slides = [
     {

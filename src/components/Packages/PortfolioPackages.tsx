@@ -10,14 +10,14 @@ import GetStarted from "../GetStarted";
 import Testimonials from "../Testimonials";
 import Footer from "../Footer";
 import CopyRightBar from "../CopyRightBar";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 
 const PortfolioPackages = () => {
   const [active, setActive] = useState("");
   const [filterCards, setFilterCards] = useState(null);
   const [filterImages, setFilterImages] = useState(null);
 
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
 
   useEffect(() => {
     setFilterCards(packages);

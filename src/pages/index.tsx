@@ -3,7 +3,6 @@ import Head from "next/head";
 import Header from "~/components/Header/Header";
 import ServicePackages from "~/components/Packages/ServicePackages";
 import ServicesCard from "~/components/cards/ServicesCard";
-import Button from "~/components/ui/Button";
 import ServicesData from "~/data/ServicesData";
 import GetStarted from "~/components/GetStarted";
 import Footer from "~/components/Footer";
@@ -14,7 +13,7 @@ import MyModal from "~/components/MyModal";
 import Testimonials from "~/components/Testimonials";
 import Expertise from "~/components/Expertise";
 import Agencies from "~/components/Agencies";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 import FluidContainer from "~/components/ui/FluidContainer";
 import Container from "~/components/ui/Container";
 import Heading2 from "~/components/ui/Heading2";
@@ -23,7 +22,11 @@ import CollisionButton from "~/components/ui/CollisionButton";
 import ServicesCardsSlider from "~/components/Slider/ServicesCardsSlider";
 
 const Home: NextPage = () => {
-  const [modalActive, setModalActive] = useRQGlobalState("modal", false);
+  const  [modalActive, setModalActive] = UseRQGlobalState("modal", false);
+  function openModal() {
+    const setModalActive = true;
+  }
+
   return (
     <>
       <Head>
@@ -80,9 +83,9 @@ const Home: NextPage = () => {
             <div className=" flex flex-col items-center gap-10 md:flex-row">
               <CollisionButton
                 variant="Dark"
-                onClick={() => setModalActive(true)}
+                onClick={() => openModal()}
               >
-                Let's Get Your Project Started
+                Let&apos;s Get Your Project Started
               </CollisionButton>
               
             </div>
@@ -237,9 +240,9 @@ const Home: NextPage = () => {
                     </ul>
                     <CollisionButton
                       variant="Dark"
-                      onClick={() => setModalActive(true)}
+                      onClick={() => openModal()}
                     >
-                      Let's Get started
+                      Let&apos;s Get started
                     </CollisionButton>
                   </div>
                 </div>

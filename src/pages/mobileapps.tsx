@@ -11,11 +11,11 @@ import ServicesContact from "~/components/ServicesContact";
 import Testimonials from "~/components/Testimonials";
 import InfoSec from "~/components/InfoSec";
 import Button from "~/components/ui/Button";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 
 const mobileapps: FC = () => {
 
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
 
 
   const mobileCard = [

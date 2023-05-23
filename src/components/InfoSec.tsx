@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Button from './ui/Button'
-import useRQGlobalState from '~/utils/useRQGlobalState';
+import UseRQGlobalState from '~/utils/useRQGlobalState';
 
 interface InfoSecProps {
     smallHeading :string,
@@ -10,7 +10,7 @@ interface InfoSecProps {
 }
 
 const InfoSec:FC<InfoSecProps> = ({smallHeading,mainHeading,desc,infocardData}) => {
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
   return (
     <section className=" about-choose-section bg-[url('/about-choose-bg.webp')] bg-cover bg-no-repeat py-[60px] md:py-[90px]">
         <div className="container mx-auto px-[15px]">

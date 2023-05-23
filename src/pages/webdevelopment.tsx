@@ -12,10 +12,10 @@ import ServicesContact from "~/components/ServicesContact";
 import ServicesSlider from "~/components/Slider/ServicesSlider";
 import ThumbsSlider from "~/components/Slider/ThumbsSlider";
 import Testimonials from "~/components/Testimonials";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 
 const webdevelopment = () => {
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
 
   
   const infoSecData = [

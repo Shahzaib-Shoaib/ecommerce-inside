@@ -13,10 +13,10 @@ import ServicesContact from "~/components/ServicesContact";
 import ServicesSlider from "~/components/Slider/ServicesSlider";
 import Testimonials from "~/components/Testimonials";
 import Button from "~/components/ui/Button";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 
 const softwaredevelopment: NextPage = () => {
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
 
 
   const infoSecData = [

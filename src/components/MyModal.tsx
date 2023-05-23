@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import {IoCloseSharp} from 'react-icons/io5';
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 
 const MyModal: FC = () => {
 
 
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
     // if(!visible) return null;
     if(!modalActive) return null;
 

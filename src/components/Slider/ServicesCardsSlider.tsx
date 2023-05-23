@@ -1,16 +1,19 @@
 import React, { FC, useState } from "react";
-import TwinColSliderData from "~/data/TwinColSliderData";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, Pagination, A11y } from "swiper";
+import SwiperCore, { Autoplay, Pagination, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import Button from "../ui/Button";
-import useRQGlobalState from "~/utils/useRQGlobalState";
-import Heading1 from "../ui/Heading1";
-import Paragraph from "../ui/Paragraph";
-import CollisionButton from "../ui/CollisionButton";
 import "swiper/css/pagination";
 
+
+interface Data {
+  icon: string;
+  title: string;
+  desc: string;
+  link: string;
+  img: string;
+  cat: string[];
+}
 const ServicesCardsSlider: FC = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   SwiperCore.use([Autoplay, Pagination, A11y]);
@@ -47,7 +50,7 @@ const ServicesCardsSlider: FC = ({ data }) => {
           </div>
         </div>
       </SwiperSlide>
-      {data.map((service, index) => (
+      {data.map((service:Data, index:number) => (
         <SwiperSlide key={index}>
           <div
             className={`group relative flex h-[385px] flex-col justify-center border bg-[url('/service-img-2.webp')]  bg-cover bg-center bg-no-repeat px-[15px] md:px-[50px]`}

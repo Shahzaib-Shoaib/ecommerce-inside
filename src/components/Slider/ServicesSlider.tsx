@@ -4,7 +4,7 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.css";
 import Button from "../ui/Button";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -16,7 +16,7 @@ const ServicesSlider = ({ sliderData }) => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
 
 
   return (

@@ -1,7 +1,7 @@
 import { url } from 'inspector'
 import React, { FC } from 'react'
 
-const ServicesCard: FC = ({ service }:any) => {
+const ServicesCard: FC = ({ service }) => {
     return (
         // <div className={`bg-[url('/service-img-2.webp')] bg-cover bg-no-repeat bg-center relative px-9 flex flex-col h-[385px]  justify-center border group`}>
         <div  className={`bg-[url('/service-img-2.webp')] bg-cover bg-no-repeat bg-center relative flex flex-col h-[385px]  justify-center border group px-[15px] md:px-[50px]`}  style={{backgroundImage:`url(${service.img})`}}>

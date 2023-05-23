@@ -3,11 +3,11 @@ import Button from "./ui/Button";
 import TechLeaf from "./TechLeaf";
 import rightTechLeafData from "~/data/rightTechLeafData";
 import leftTechLeafData from "~/data/leftTechLeafData";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 import CollisionButton from "./ui/CollisionButton";
 
 const Expertise = () => {
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
   return (
     <section className="pb-[30px]">
       <div className="container mx-auto">

@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import Button from '../ui/Button'
 import Link from 'next/link'
-import useRQGlobalState from '~/utils/useRQGlobalState';
+import UseRQGlobalState from '~/utils/useRQGlobalState';
 import Paragraph from '../ui/Paragraph';
 import CollisionButton from '../ui/CollisionButton';
 
 const PackageCard: FC = ({ info }) => {
-    const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+    const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
     return (
 
         <div className="package-box border-darkblue border-2 rounded-lg p-[35px] group hover:bg-darkblue duration-300 flex flex-col" >

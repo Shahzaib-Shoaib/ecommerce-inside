@@ -1,5 +1,5 @@
 import React from "react";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import UseRQGlobalState from "~/utils/useRQGlobalState";
 import Agencies from "~/components/Agencies";
 import Banner from "~/components/Banner";
 import CopyRightBar from "~/components/CopyRightBar";
@@ -15,7 +15,7 @@ import MyModal from "~/components/MyModal";
 // import aboutchooseData from "~/data/aboutchooseData";
 
 const aboutus = () => {
-  const [modalActive,setModalActive] = useRQGlobalState('modal',false);
+  const [modalActive,setModalActive] = UseRQGlobalState('modal',false);
 
 
   const aboutchooseData = [

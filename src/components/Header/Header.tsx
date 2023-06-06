@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import TopBar from "./TopBar";
-import Navbar from "./Navbar";
+import Navbar from "./NavBar";
 
 const Header: FC = () => {
   return (

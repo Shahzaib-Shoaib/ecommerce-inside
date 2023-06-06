@@ -3,65 +3,130 @@ import { type Config } from "tailwindcss";
 export default {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./public/**/*.html",
-    "./node_modules/flowbite-react/**/*.js",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/hooks/**/*.{js,ts,jsx,tsx}",
+    "./src/utils/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-      },
       screens: {
-        sm: "350px",
-        // => @media (min-width: 350px) { ... }
-
-        md: "480px",
-        // => @media (min-width: 480px) { ... }
-
-        lg: "768px",
-        // => @media (min-width: 768px) { ... }
-
-        xl: "881px",
-        // => @media (min-width: 881px) { ... }
-
-        "2xl": "1024px",
-        // => @media (min-width: 1024px) { ... }
-
-        "3xl": "1280px",
-        // => @media (min-width: 1280px) { ... }
-
-        "4xl": "1366px",
-        // => @media (min-width: 1366px) { ... }
-
-        "5xl": "1444px",
-        // => @media (min-width: 1444px) { ... }
-
-        "6xl": "1920px",
-        // => @media (min-width: 1920px) { ... }
-      },
-      fontSize: {
-        xs: "12px",
-        sm: "14px",
-        base: "16px",
-        base2: "16px",
-        p: "16px",
-        h1: "42px",
-        h2: "36px",
-        h3: "30px",
-        h4: "24px",
-        h5: "18px",
+        sm: { min: "0px", max: "350px" },
+        md: { min: "351px", max: "480px" },
+        lg: { min: "481px", max: "768px" },
+        xl: { min: "769px", max: "880px" },
+        "2xl": { min: "881px", max: "1024px" },
+        "3xl": { min: "1025px", max: "1280px" },
+        "4xl": { min: "1281px", max: "1366px" },
+        "5xl": { min: "1367px", max: "1444px" },
+        "6xl": { min: "1445px", max: "1920px" },
       },
       colors: {
         transparent: "transparent",
-        black: "#000",
-        white: "#fff",
+        black: "#000000",
+        white: "#ffffff",
         darkblue: "#201949",
         caribbeangreen: "#00E2A1",
+        dark: "#0f0c16",
+        darkgray: "#666",
       },
-      boxShadow: {
-        leafShadow: "0 6px 13px 0 rgb(0 0 0 / 10%)",
+      fontSize: {
+        // sm: [fontSize, lineHeight],
+        sm: ["14px", "20px"],
+        base: ["16px", "24px"],
+        lg: ["20px", "28px"],
+        xl: ["24px", "32px"],
+
+        //tagName ['fontSize', { lineHeight?, letterSpacing?, fontWeight? }]
+        h1: [
+          "2.25rem",
+          {
+            lineHeight: "2.75rem",
+            fontWeight: "500",
+          },
+        ],
+        h2: [
+          "1.875rem",
+          {
+            lineHeight: "2.375rem",
+          },
+        ],
+        h3: [
+          "1.5rem",
+          {
+            lineHeight: "2rem",
+          },
+        ],
+        h4: [
+          "1.25rem",
+          {
+            lineHeight: "1.75rem",
+          },
+        ],
+        h5: [
+          "1.125rem",
+          {
+            lineHeight: "1.625rem",
+          },
+        ],
+        h6: [
+          "1rem",
+          {
+            lineHeight: "1.5rem",
+          },
+        ],
+        p: [
+          "0.9rem",
+          {
+            lineHeight: "1.1rem",
+          },
+        ],
+        span: [
+          "0.9rem",
+          {
+            lineHeight: "1.1rem",
+          },
+        ],
+        quote: [
+          "1.125rem",
+          {
+            lineHeight: "1.75rem",
+            fontWeight: "600",
+          },
+        ],
       },
-      keyframes: {
+      keyframes:{
+        "move-left": {
+          "0%": {
+            left: "-20px",
+          },
+          "50%": {
+            left:"50%",
+            width: "20px",
+            height: "20px",
+          },
+          "100%": {
+            left:"50%",
+            width: "400px",
+            height: "400px",
+          },
+        },
+        "move-right": {
+          "0%": {
+            right: "-20px",
+          },
+          "50%": {
+            right:"50%",
+            width: "20px",
+            height: "20px",
+          },
+          "100%": {
+            right:"50%",
+            width: "400px",
+            height: "400px",
+          },
+        },
         "fade-in-down": {
           "0%": {
             opacity: "0",
@@ -127,13 +192,15 @@ export default {
         },
       },
       animation: {
+        "move-left": "move-left 0.8s ",
+        "move-right": "move-right 0.8s ",
         "fade-in-up": "fade-in-up 0.5s ease-out",
         "fade-in-down": "fade-in-down 0.5s ease-out",
         "appear-down": "appear-down 0.5s ease-out",
         "grow-shrink": "grow-shrink 1.8s infinite",
         "circle-spin": "circle-spin 8s ease infinite",
         "circle-rotate": "circle-rotate 8s ease infinite",
-      },
+      }
     },
   },
   plugins: [],

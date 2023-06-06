@@ -1,64 +1,60 @@
 import React from "react";
 import FormTextField from "./ui/FormTextField";
+import Button from "./ui/Button";
 import ContactDropdown from "./ui/ContactDropdown";
 
 const ContactForm = () => {
   const services = [
     {
-      id: 1,
+      id: "1",
       name: "Services",
     },
     {
-      id: 1,
+      id: "2",
       name: "Mobile Apps",
     },
     {
-      id: 1,
+      id: "3",
       name: "Web Development",
     },
     {
-      id: 1,
+      id: "4",
       name: "Branding",
     },
     {
-      id: 1,
+      id: "5",
       name: "Digital Marketing",
     },
     {
-      id: 1,
+      id: "6",
       name: "Software Solutions",
     },
   ];
   return (
     <div className="contact-form">
-      <div className="personal grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="personal grid grid-cols-2 gap-4 ">
         <FormTextField
-          ariaLable={"Name"}
           placeholder={"Enter Your Name"}
-          className="col-span-2 md:col-span-1"
+          className="col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2"
         />
         <FormTextField
-          ariaLable={"Email"}
           placeholder={"Enter Your Email Address"}
-          className="col-span-2 md:col-span-1"
+          className="col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2"
         />
         <FormTextField
-          ariaLable={"Phone"}
           placeholder={"Enter Your Phone Number"}
-          className="col-span-2 md:col-span-1"
+          className="col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2"
         />
         <ContactDropdown
-          ariaLable={"Phone"}
           options={services}
-          className="col-span-2 md:col-span-1"
+          className="col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2"
         />
         <FormTextField
-          ariaLable={"message"}
           placeholder={"Message"}
           className="col-span-2"
         />
         <div className="submit-btn">
-          <input type="submit" value={"Let's Get Started"} />
+          <Button variant="Green">Let's Get Started</Button>
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 
-interface BannerProps {
-  bgImg: string;
+type BannerProps = {
+  bgImg: String;
   img: string;
-  smallHeading: string | null;
-  mainHeading: Array<string>| any;
-  desc: string | null;
-}
+  smallHeading: String | null;
+  mainHeading: string;
+  desc: String | null;
+};
 
 const Banner: FC<BannerProps> = ({
   img,
@@ -17,30 +17,22 @@ const Banner: FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className="bg-cover bg-center bg-no-repeat pt-[200px]"
+      className="overflow-hidden bg-cover bg-center bg-no-repeat pt-[200px] px-0 pb-0"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="banner-container mx-auto px-[15px]">
-        <div className="flex justify-between">
-          <div className="ml-[-15px] flex w-[80%] md:w-[60%]  flex-col justify-center rounded-br-[200px] bg-transparent bg-[url('/banner-slide-img.webp')] bg-cover py-[70px] pl-[20px] pr-[90px] lg:w-[40%]">
-            {smallHeading && (
-              <span className=" pb-[5px] text-[20px] font-bold text-white lg:pb-[15px] lg:text-[30px] ">
-                {smallHeading}
-              </span>
-            )}
-            <h1 className="text-[20px] font-bold leading-[30px]  text-white lg:text-[38px]  lg:leading-[1.2] xl:text-[45px] pb-[15px]">
-              {mainHeading}
-            </h1>
-            {desc && (
-              <p className="text-[14px] text-white md:text-[12px] lg:text-[15px] xl:text-[16] ">
-                {desc}
-              </p>
-            )}
-          </div>
+      <div className="banner-container mx-auto grid grid-cols-1 3xl:grid-cols-2 4xl:grid-cols-2 5xl:grid-cols-2 6xl:grid-cols-2 ">
+        <div className="heroRounded w-[80%] -left-[15px] flex flex-col items-start justify-center  bg-transparent bg-[url('/images/banner-slide-img.webp')] bg-cover">
+          {smallHeading && (
+            <span className=" pb-[5px] font-bold text-white ">
+              {smallHeading}
+            </span>
+          )}
+          <h1 className="font-bold  text-white pb-[10px]">{mainHeading}</h1>
+          {desc && <p className=" text-white ">{desc}</p>}
+        </div>
 
-          <div className="hidden items-end justify-center md:flex">
-            <img src={img} alt="about us banner pic" className="w-[76%]" />
-          </div>
+        <div className=" items-end justify-center hidden 3xl:flex 4xl:flex 5xl:flex 6xl:flex">
+          <img src={img} alt="about us banner pic" className="w-[80%]" />
         </div>
       </div>
     </section>

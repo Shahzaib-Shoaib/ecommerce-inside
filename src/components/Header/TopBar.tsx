@@ -1,47 +1,37 @@
-import Link from "next/link";
-import React, { FC } from "react";
+import Link from 'next/link'
+import React, { FC } from 'react'
 import { FaFacebookF, FaLinkedinIn, FaEnvelopeOpenText } from "react-icons/fa";
 import { BsInstagram, BsFillTelephoneFill } from "react-icons/bs";
 
-const TopBar: FC = () => {
+const TopBar:FC = () => {
   return (
     <div className="flex items-center justify-between bg-darkblue py-[10px] text-white">
-      <div className="social-icons flex items-center">
-        <Link
-          href={"#"}
-          className="border-r-[1px] border-white px-3 hover:text-caribbeangreen"
-        >
-          <FaFacebookF size={16} />
+      {/* Left Side Social Icons */}
+      <div className="social_icons flex items-center">
+        <Link href={'#'} className='border-r border-white px-3 hover:text-caribbeangreen'>
+        <FaFacebookF size={18} />
         </Link>
-        <Link
-          href={"#"}
-          className="border-r-[1px] border-white px-3 hover:text-caribbeangreen"
-        >
-          <BsInstagram size={16} />
+        <Link href={'#'} className='border-r border-white px-3 hover:text-caribbeangreen'>
+        <BsInstagram size={18} />
         </Link>
-        <Link href={"#"} className="px-3 hover:text-caribbeangreen">
-          <FaLinkedinIn size={16} />
+        <Link href={'#'} className='px-3 hover:text-caribbeangreen'>
+        <FaLinkedinIn size={18} />
         </Link>
       </div>
 
-      <div className="contact-info flex items-center">
-        <Link
-          href={"mailto:info@ecommerceinside.co"}
-          className="flex items-center px-1 hover:text-caribbeangreen md:px-3"
-        >
-          <FaEnvelopeOpenText size={16} className="mr-3" />
-          <span className="hidden lg:block">info@ecommerceinside.co</span>
+      {/* Right Contact Info and Icons */}
+      <div className="contact_info flex items-center">
+        <Link href={'mailto:info@ecommerceinside.co'} className='flex items-center px-1 hover:text-caribbeangreen xl:px-3 2xl:px-3 3xl:px-3 4xl:px-3 5xl:px-3 6xl:px-3'>
+        <FaEnvelopeOpenText size={18} className="mr-3" />
+          <span className="hidden xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block">info@ecommerceinside.co</span>
         </Link>
-        <Link
-          href={"tel:+971045916004"}
-          className="flex items-center px-1 hover:text-caribbeangreen md:px-3"
-        >
-          <BsFillTelephoneFill size={16} className="mr-3" />
-          <span className="hidden lg:block">+1 (734) 361 4340</span>
+        <Link href={'tel:+971045916004'} className='flex items-center px-1 hover:text-caribbeangreen xl:px-3 2xl:px-3 3xl:px-3 4xl:px-3 5xl:px-3 6xl:px-3'>
+        <BsFillTelephoneFill size={18} className="mr-3" />
+          <span className="hidden xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block">+1 (734) 361 4340</span>
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TopBar;
+export default TopBar

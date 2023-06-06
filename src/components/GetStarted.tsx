@@ -1,122 +1,125 @@
+"use client";
 import React, { FC } from "react";
-import CollisionButton from "./ui/CollisionButton";
+import Button from "./ui/Button";
+import { useForm } from "react-hook-form";
+import ErrorAlert from "./ui/ErrorAlert";
+
+type FormData = {
+  name: string;
+  email: string;
+  phone: number;
+};
+
 
 const GetStarted: FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onContact = (data:FormData) => {
+    console.log(data)
+  }
+
   return (
-    <section className=" flex items-center bg-[url('/footer-form-bg.webp')]  3xl:h-[860px] py-[30px] lg:-[60px] overflow-hidden">
-      <div className="container mx-auto px-[10px]">
-        <div className="row flex flex-col lg:flex-row gap-8">
-          <div className="getStartedLeft hidden lg:block relative lg:max-w-[50%]">
-            
-
-
-            <div className="getstarted-left-circle relative -left-[30]">
-                <img src="/footer-left-circle.webp" alt="Footer Left Circle" />
+    <section className="flex h-[100vh] items-center justify-center overflow-hidden bg-[url('/images/footer-form-bg.webp')] bg-cover bg-center bg-no-repeat py-[100px]">
+      <div className="div_container">
+        <div className="row grid grid-cols-1 gap-8 3xl:grid-cols-2 4xl:grid-cols-2 5xl:grid-cols-2 6xl:grid-cols-2">
+          <div className="left relative m-auto hidden h-[500px] w-[500px] items-center justify-center 3xl:block 4xl:block 5xl:block 6xl:block">
+            <div className="getstarted-left-circle relative m-auto">
+              <img
+                src="/images/footer-left-circle.webp"
+                alt="Footer Left Circle"
+              />
             </div>
-            <div className="getstarted-left-laptop -top-[50px] -right-[40px] absolute">
-                <img src="/footer-left-laptop.webp" alt="Footer Left Laptop" />
+            <div className="getstarted-left-laptop absolute -right-[10%] -top-[8%]">
+              <img
+                src="/images/footer-left-laptop.webp"
+                alt="Footer Left Laptop"
+              />
             </div>
-            <div className="getstarted-left-img top-[160px] w-[73%] -left-[20px] absolute">
-                <img src="/footer-left-img.webp" alt="Footer IMG" />
+            <div className="getstarted-left-img  absolute right-[25%] top-[32%] w-[73%]">
+              <img src="/images/footer-left-img.webp" alt="Footer IMG" />
             </div>
-            <div className="getstarted-left-tree top-0 -left-[20px] absolute">
-                <img src="/footer-left-tree.webp" alt="Footer Left Tree" />
+            <div className="getstarted-left-tree absolute left-0 top-0">
+              <img src="/images/footer-left-tree.webp" alt="Footer Left Tree" />
             </div>
-            <div className="getstarted-left-watch -top-[30px] left-[30%] absolute">
-                <img src="/footer-left-watch.webp" alt="Footer Left Watch" />
+            <div className="getstarted-left-watch  absolute -top-[5%] left-[35%]">
+              <img
+                src="/images/footer-left-watch.webp"
+                alt="Footer Left Watch"
+              />
             </div>
-
-
-
           </div>
-          <div className="getStartedRight relative  lg:max-w-[50%]">
-            <h3 className="GetStartedHeading text-[30px] font-bold text-white lg:text-[40px] 3xl:text-[50px] before:hidden lg:before:block  lg:before:bg-[url('/footer-right-circle.webp')]  bg-no-repeat before:animate-circle-spin before:w-[794px] before:h-[806px] before:-top-[140px] before:-right-[250] before:absolute ">
-              Let's Get Started! 
+
+          <div className="right relative">
+            <h3 className="bg-no-repeat text-white before:absolute before:-right-[250] before:-top-[140px] before:h-[806px] before:w-[794px] before:animate-circle-spin before:bg-[url('/images/footer-right-circle.webp')] sm:before:hidden md:before:hidden lg:before:hidden xl:before:hidden 2xl:before:hidden">
+              Let's Get Started!
             </h3>
-            <p className="md:text[16] pb-[26px] pt-[10px] text-[14px] text-[#b4a5d6] md:pb-[36px] md:pt-[15px] lg:text-[20px]">
+            <p className="text-[#b4a5d6]">
               We’ve got budget-friendly solutions and flexible design packages
               that meet your needs.
             </p>
-            <div className="getStarted-form absolute z-[9999999]">
-              <form id="Get Started">
-                <div className="form-group">
-                  <label>Your Name</label>
-                  <input type="text" className="form-control input-lg w-full " placeholder="Enter Your Name" size={50}/>
-                </div>
-                <div className="form-group">
-                  <label>Email Address</label>
-                  <input type="email" className="form-control input-lg w-full " placeholder="Enter Your Email Address" size={50}/>
-                </div>
-                <div className="form-group">
-                  <label>Phone No</label>
-                  <input type="tel" className="form-control input-lg w-full " placeholder="Enter Your Phone Number" size={50} />
-                </div>
-                {/* <input type="submit"  value={"Let's Get Started"}/> */}
-                <div className="mt-[20px]">
-
-                <CollisionButton variant="Dark" className="">Let's Get Started</CollisionButton>
-                </div>
-              </form>
-            </div>
+            <form id="Get Started">
+              <div className="form-group">
+                <label>Your Name</label>
+                <input
+                  type="text"
+                  className="form-control  w-full "
+                  placeholder="Enter Your Name"
+                  size={50}
+                  {...register("name", {
+                    required: "Name is required",
+                    pattern: /^[A-Za-z]+$/i,
+                  })}
+                />
+              </div>
+                {errors.name ? (
+                <ErrorAlert error={errors.name && "Please use Valid Name"} />
+              ) : null}
+              <div className="form-group">
+                <label>Email Address</label>
+                <input
+                  type="email"
+                  className="form-control  w-full "
+                  placeholder="Enter Your Email Address"
+                  size={50}
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                  })}
+                />
+              </div>
+              {errors.email ? (
+                <ErrorAlert error={errors.email && "Please use Correct email Address"} />
+              ) : null}
+              <div className="form-group">
+                <label>Phone No</label>
+                <input
+                  type="tel"
+                  className="form-control  w-full "
+                  placeholder="Enter Your Phone Number"
+                  size={50}
+                  {...register("phone", {
+                    required: "Phone No is required",
+                    pattern: /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
+                  })}
+                />
+              </div>
+              {errors.phone ? (
+                <ErrorAlert error={errors.phone && "Please use Correct Phone Number"} />
+              ) : null}
+              <div className="mt-[20px]">
+                <Button variant="Green" className="" onClick={handleSubmit(onContact)}>
+                  Let's Get Started
+                </Button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
-    // <section className="relative flex items-center bg-[url('/footer-form-bg.webp')]  3xl:h-[860px] py-[30px] lg:-[60px] overflow-hidden">
-    //   <div className="container mx-auto px-[10px]">
-    //     <div className="row flex flex-col lg:flex-row gap-8">
-    //       <div className="getStartedLeft hidden lg:block relative lg:max-w-[50%]">
-            
-
-
-    //         <div className="getstarted-left-circle relative -left-[30]">
-    //             <img src="/footer-left-circle.webp" alt="Footer Left Circle" />
-    //         </div>
-    //         <div className="getstarted-left-laptop -top-[50px] -right-[40px] absolute">
-    //             <img src="/footer-left-laptop.webp" alt="Footer Left Laptop" />
-    //         </div>
-    //         <div className="getstarted-left-img top-[160px] w-[73%] -left-[20px] absolute">
-    //             <img src="/footer-left-img.webp" alt="Footer IMG" />
-    //         </div>
-    //         <div className="getstarted-left-tree top-0 -left-[20px] absolute">
-    //             <img src="/footer-left-tree.webp" alt="Footer Left Tree" />
-    //         </div>
-    //         <div className="getstarted-left-watch -top-[30px] left-[30%] absolute">
-    //             <img src="/footer-left-watch.webp" alt="Footer Left Watch" />
-    //         </div>
-
-
-
-    //       </div>
-    //       <div className="getStartedRight  !z-[999999] lg:max-w-[50%]">
-    //         <h3 className="GetStartedHeading text-[30px] font-bold text-white lg:text-[40px] 3xl:text-[50px] after:hidden lg:after:block  lg:after:bg-[url('/footer-right-circle.webp')] after:w-[794px] after:h-[806px] after:-top-[10px] after:right-[250px] after:z-[999] after:absolute bg-no-repeat after:animate-circle-spin ">
-    //           Let's Get Started!
-    //         </h3>
-    //         <p className="md:text[16] pb-[26px] pt-[10px] text-[14px] text-[#b4a5d6] md:pb-[36px] md:pt-[15px] lg:text-[20px]">
-    //           We’ve got budget-friendly solutions and flexible design packages
-    //           that meet your needs.
-    //         </p>
-    //         <div className="getStarted-form">
-    //           <form id="Get Started">
-    //             <div className="form-group">
-    //               <label>Your Name</label>
-    //               <input type="text" className="form-control input-lg w-full " placeholder="Enter Your Name" size={50}/>
-    //             </div>
-    //             <div className="form-group">
-    //               <label>Email Address</label>
-    //               <input type="email" className="form-control input-lg w-full " placeholder="Enter Your Email Address" size={50}/>
-    //             </div>
-    //             <div className="form-group">
-    //               <label>Phone No</label>
-    //               <input type="tel" className="form-control input-lg w-full " placeholder="Enter Your Phone Number" size={50} />
-    //             </div>
-    //             <input type="submit"  value={"Let's Get Started"}/>
-    //           </form>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
   );
 };
 

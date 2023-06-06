@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import TopBar from './TopBar'
-import NavBar from './NavBar'
+import Navbar from './Navbar'
 
 const Header:FC = () => {
   return (
-    <header className='fixed top-0 left-0 z-10 w-full'>
+    <header className="fixed top-0 left-0 w-full z-50">
         <TopBar />
-        <NavBar />
+        <Navbar />
     </header>
   )
 }

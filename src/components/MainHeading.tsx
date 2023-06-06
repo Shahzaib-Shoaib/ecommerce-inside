@@ -1,6 +1,6 @@
-import React,{FC} from 'react'
+import React, { FC } from 'react'
 
-interface MainHeadingProps {
+type MainHeadingProps = {
     subHeading: string;
     mainHeading:string;
     spanHeading:string;
@@ -9,14 +9,14 @@ interface MainHeadingProps {
 
 const MainHeading:FC<MainHeadingProps> = ({subHeading,mainHeading,spanHeading,desc}) => {
   return (
-    <div className='section-heading text-center'>
-        <h2 className="sub-heading xs:text-[16px] xs:pb-[5px] text-[#666] xs:font-semibold xs:leading-[1.2] sm:text-[20px] md:text-[24px]  ">
-            {subHeading}
-        </h2>
-        <h3 className="main-heading xs:font-bold font-bold xs:text-[#1b1037] xs:py-[10px] xs:leading-[1.2] xs:text-[20px] sm:text-[26px] md:text-[28px] lg:text-[35px] xl:tex-[45px]">{mainHeading}
-        <br /><span className='text-caribbeangreen'>{subHeading}</span>
-        </h3>
-        <p className="desc text-[#666] font-normal xs:text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] ">{desc}</p>
+    <div className="sec_heading text-center">
+        <h6 className='font-semibold leading-[1.2]'>{subHeading}</h6>
+        <div className="flex items-center justify-center my-3">
+
+        <h1 className="main_heading font-bold text-[#1b1037] leading-[1.2]">{mainHeading}</h1>
+        <h1 className="text-caribbeangreen ml-2">{spanHeading}</h1>
+        </div>
+        <p className="text-[#666] font-normal">{desc}</p>
     </div>
   )
 }

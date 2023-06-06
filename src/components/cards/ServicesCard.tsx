@@ -1,31 +1,62 @@
-import { url } from 'inspector'
-import React, { FC } from 'react'
+import React from "react";
 
-const ServicesCard: FC = ({ service }) => {
-    return (
-        // <div className={`bg-[url('/service-img-2.webp')] bg-cover bg-no-repeat bg-center relative px-9 flex flex-col h-[385px]  justify-center border group`}>
-        <div  className={`bg-[url('/service-img-2.webp')] bg-cover bg-no-repeat bg-center relative flex flex-col h-[385px]  justify-center border group px-[15px] md:px-[50px]`}  style={{backgroundImage:`url(${service.img})`}}>
-            <div className=' group-hover:hidden flex flex-col'>
-                <img src={service.icon} alt="" className='pb-[15px] h-[54px] w-[50px] ' />
-                <h3 className='text-h4 md:text-base2 text-white font-bold pb-[20px]'>{service.title}</h3>
-                <ul className='flex flex-wrap list-none'>
-                    {service.cat.map(({catagory,index}:any) => (
-                        <li className='first:border-l-0 first:pl-0 uppercase text-xs px-[12px] border-l border-gray-400 text-gray-400' key={index}>{catagory}</li>
-                    ))}
-                </ul>
-            </div>
-            <div className="servie-para  group-hover:block flex flex-col">
-                <h5 className='text-p md:text-base2 text-caribbeangreen font-bold pb-[20px]'>{service.title}</h5>
-                <ul className='flex flex-wrap list-none'>
-                {service.cat.map(({catagory,id}:any) => (
-                        <li className='first:border-l-0 first:pl-0 uppercase text-xs px-[12px] border-l border-gray-400 text-gray-400' key={id}>{catagory}</li>
-                    ))}
-                </ul>
-                <p className=' text-white text-sm pt-3'>{service.desc}</p>
-                <a href={service.link} className='text-caribbeangreen text-sm'>Read More</a>
-            </div>
-        </div>
-    )
-}
+type ServicesDataType = {
+  id: string;
+  icon: string;
+  title: string;
+  desc: string;
+  link: string;
+  img: string;
+  cat: string[];
+};
 
-export default ServicesCard
+const ServicesCard = ({ service }: { service: ServicesDataType }) => {
+  return (
+    <div
+      className={`group relative flex h-[450px] flex-col justify-center border  bg-cover bg-center bg-no-repeat px-[15px] md:px-[50px]`}
+      style={{ backgroundImage: `url(/images${service.img})` }}
+    >
+      <div className="flex flex-col group-hover:hidden">
+        <img
+          src={`/images${service.icon}`}
+          alt=""
+          className="h-[54px] w-[50px] pb-[15px] "
+        />
+        <h3 className="md:text-base2 pb-[20px] text-h4 font-bold text-white">
+          {service.title}
+        </h3>
+        <ul className="flex list-none flex-wrap">
+          {service.cat.map((catagory) => (
+            <li
+              className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-400 first:border-l-0 first:pl-0"
+              key={catagory}
+            >
+              {catagory}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="servie-para   flex-col hidden group-hover:flex ">
+        <h3 className="md:text-base2 pb-[20px] text-h4 font-bold text-caribbeangreen">
+          {service.title}
+        </h3>
+        <ul className="flex list-none flex-wrap">
+          {service.cat.map((catagory) => (
+            <li
+              className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-400 first:border-l-0 first:pl-0"
+              key={catagory}
+            >
+              {catagory}
+            </li>
+          ))}
+        </ul>
+        <p className=" pt-3 text-sm text-white">{service.desc}</p>
+        <a href={service.link} className="text-sm text-caribbeangreen">
+          Read More
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default ServicesCard;

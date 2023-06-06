@@ -6,7 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/swiper-bundle.css";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
-import aboutStrategyData from "../../data/aboutStrategyData";
+import aboutStrategyData from "~/data/aboutStrategyData";
+
 
 const AboutStrategySlider = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);

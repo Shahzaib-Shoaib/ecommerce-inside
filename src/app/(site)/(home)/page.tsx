@@ -9,6 +9,7 @@ import ServicesCard from "~/components/cards/ServicesCard";
 import Button from "~/components/ui/Button";
 import ServicesData from "~/data/ServicesData";
 
+
 export const metadata = {
   title: "Home | Ecommerce Inside",
   description:

@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { FC, useState } from "react";
 import { GrMenu } from "react-icons/gr";
 import { IoClose } from "react-icons/io5";
-import navlinks from "@/data/navLinks";
+import navlinks from "@/data/navlinks";
 
 const MobileMenu: FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

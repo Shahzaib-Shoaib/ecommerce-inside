@@ -14,12 +14,12 @@ import ServicesData from "@/data/ServicesData";
 //   description:
 //     "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 // };
-export const metadata = {
-  title: "Ecommerce Inside",
-  description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
-    icons: [{ rel: "icon", url: "/images/favicon.webp" }],
-};
+// export const metadata = {
+//   title: "Ecommerce Inside",
+//   description:
+//     "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+//     icons: [{ rel: "icon", url: "/images/favicon.webp" }],
+// };
 const Home: NextPage = () => {
   return (
     <div className="">

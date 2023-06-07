@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import Banner from "~/components/Banner";
-import servicesqualityData from "~/data/servicesqualityData";
+import Banner from "@/components/Banner";
+import servicesqualityData from "@/data/servicesqualityData";
 
 export const metadata = {
   title: "Services | Ecommerce Inside",

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import SwiperCore from "swiper";
-import {Autoplay,Navigation,useSwiper,Swiper,SwiperSlide} from "~/components/ui/Slider";
+import {Autoplay,Navigation,useSwiper,Swiper,SwiperSlide} from "@/components/ui/Slider";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
-import ProjectsData from "~/data/ProjectsData";
+import ProjectsData from "@/data/ProjectsData";
 import Button from "../ui/Button";
 
 const ProjectSlider = () => {

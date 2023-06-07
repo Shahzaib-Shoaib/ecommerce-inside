@@ -1,8 +1,8 @@
 'use client'
 import React, { FC } from "react";
 import SwiperCore from "swiper";
-import {Autoplay,Pagination,A11y,useSwiper,Swiper,SwiperSlide} from "~/components/ui/Slider";
-import heroSliderData from "~/data/HeroSliderData";
+import {Autoplay,Pagination,A11y,useSwiper,Swiper,SwiperSlide} from "@/components/ui/Slider";
+import heroSliderData from "@/data/HeroSliderData";
 import Button from "../ui/Button";
 
 const HeroSlider: FC = () => {

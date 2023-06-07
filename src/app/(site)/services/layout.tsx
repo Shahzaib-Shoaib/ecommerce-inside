@@ -1,6 +1,6 @@
 import React from "react";
-import InfoSec from "~/components/InfoSec";
-import InfoSecData from "~/data/InfoSecData";
+import InfoSec from "@/components/InfoSec";
+import InfoSecData from "@/data/InfoSecData";
 
 const ServicesLayout = ({ children }: { children: React.ReactNode }) => {
   return (

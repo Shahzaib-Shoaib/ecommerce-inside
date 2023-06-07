@@ -1,7 +1,7 @@
 'use client'
 import React, { FC, useState } from 'react'
 import SwiperCore from "swiper";
-import {Navigation,Pagination,Thumbs,Swiper,SwiperSlide} from "~/components/ui/Slider";
+import {Navigation,Pagination,Thumbs,Swiper,SwiperSlide} from "@/components/ui/Slider";
 
 SwiperCore.use([Navigation, Pagination, Thumbs]);
 

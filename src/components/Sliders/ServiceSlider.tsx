@@ -2,7 +2,7 @@
 import React, { FC, useState } from "react";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 import SwiperCore from "swiper";
-import {Pagination,Swiper,SwiperSlide,Navigation} from "~/components/ui/Slider";
+import {Pagination,Swiper,SwiperSlide,Navigation} from "@/components/ui/Slider";
 SwiperCore.use([Navigation, Pagination]);
 
 type AnimationSliderDataType = {

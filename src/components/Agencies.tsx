@@ -1,11 +1,9 @@
 "use client";
 import React, { FC } from "react";
-import AgenciesData from "~/data/AgenciesData";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import SwiperCore, { Autoplay, Pagination, A11y } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import AgenciesData from "@/data/AgenciesData";
+import { useSwiper } from "swiper/react";
+import SwiperCore from "swiper";
+import {Autoplay,Pagination,A11y, FreeMode ,Swiper,SwiperSlide} from "@/components/ui/Slider";
 
 const Agencies: FC = () => {
   SwiperCore.use([Autoplay, Pagination, A11y]);

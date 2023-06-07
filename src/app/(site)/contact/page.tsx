@@ -1,10 +1,6 @@
 import { NextPage } from "next";
-import Banner from "~/components/Banner";
-import ContactForm from "~/components/ContactForm";
-import InfoSec from "~/components/InfoSec";
-import AboutStrategySlider from "~/components/Sliders/AboutStrategySlider";
-import ContactSlider from "~/components/Sliders/ContactSlider";
-import Button from "~/components/ui/Button";
+import ContactForm from "@/components/ContactForm";
+import ContactSlider from "@/components/Sliders/ContactSlider";
 
 export const metadata = {
   title: "Contact | Ecommerce Inside",

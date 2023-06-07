@@ -1,7 +1,7 @@
 "use client";
-import React, { FC, useState } from "react";
+import React from "react";
 import SwiperCore from "swiper";
-import {Autoplay,Pagination,A11y,useSwiper,Swiper,SwiperSlide} from "~/components/ui/Slider";
+import {Autoplay,Pagination,A11y,useSwiper,Swiper,SwiperSlide} from "@/components/ui/Slider";
 
 type ServicesData = {
   id: string;

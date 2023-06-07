@@ -1,18 +1,13 @@
 "use client";
 import React, { FC } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import SwiperCore, { Autoplay, Pagination, A11y, FreeMode } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import ExpertiseLeft from "~/data/ExpertiseLeft";
-import ExpertiseRight from "~/data/ExpertiseRight";
+import {useSwiper } from "swiper/react";
+import ExpertiseLeft from "@/data/ExpertiseLeft";
+import ExpertiseRight from "@/data/ExpertiseRight";
 import Button from "./ui/Button";
+import SwiperCore from "swiper";
+import {Autoplay,Pagination,A11y, FreeMode ,Swiper,SwiperSlide} from "@/components/ui/Slider";
 
-type ExpertiseDataType = {
-    id: string;
-    img: string;
-}[]
+
 
 const Expertise: FC = () => {
   const expertiseTech = [...ExpertiseLeft, ...ExpertiseRight];
@@ -115,12 +110,13 @@ const Expertise: FC = () => {
         >
           <ul className="flex list-none flex-wrap items-center justify-center py-[200px]">
             {expertiseTech.map((tech) => (
+
               <SwiperSlide key={tech.id}>
-                <li className="m-3 w-fit" id={tech.id} key={tech.id}>
-                  <div className="flex h-24 w-24 cursor-pointer items-center justify-center rounded-br-[50px] rounded-tl-[50px] bg-white text-center shadow-md duration-200 hover:scale-100 hover:border hover:border-black hover:bg-caribbeangreen">
+                {/* <li className="m-3 w-fit" id={tech.id} key={tech.id}> */}
+                  <div className="flex m-3 h-24 w-24 cursor-pointer items-center justify-center rounded-br-[50px] rounded-tl-[50px] bg-white text-center shadow-md duration-200 hover:scale-100 hover:border hover:border-black hover:bg-caribbeangreen" id={tech.id} key={tech.id}>
                     <img src={`/images/${tech.img}`} alt="tech-leaf" />
                   </div>
-                </li>
+                {/* </li> */}
               </SwiperSlide>
             ))}
           </ul>

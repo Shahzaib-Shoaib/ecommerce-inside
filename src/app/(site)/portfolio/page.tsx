@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import PortfolioPackages from "~/components/Packages/PortfolioPackages";
+import PortfolioPackages from "@/components/Packages/PortfolioPackages";
 
 export const metadata = {
   title: "Portfolio | Ecommerce Inside",

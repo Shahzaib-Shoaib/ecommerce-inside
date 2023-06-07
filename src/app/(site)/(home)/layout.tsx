@@ -1,4 +1,4 @@
-import Agencies from "~/components/Agencies";
+import Agencies from "@/components/Agencies";
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (

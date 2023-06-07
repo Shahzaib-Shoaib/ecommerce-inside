@@ -1,21 +1,25 @@
+'use client'
 import { NextPage } from "next";
 import Image from "next/image";
-import MyModal from "~/components/MyModal";
-import Packages from "~/components/Packages/Packages";
-import HeroSlider from "~/components/Sliders/HeroSlider";
-import ProjectSlider from "~/components/Sliders/ProjectSlider";
-import ServicesCardsSlider from "~/components/Sliders/ServicesCardsSlider";
-import ServicesCard from "~/components/cards/ServicesCard";
-import Button from "~/components/ui/Button";
-import ServicesData from "~/data/ServicesData";
+import Packages from "@/components/Packages/Packages";
+import HeroSlider from "@/components/Sliders/HeroSlider";
+import ProjectSlider from "@/components/Sliders/ProjectSlider";
+import ServicesCardsSlider from "@/components/Sliders/ServicesCardsSlider";
+import ServicesCard from "@/components/cards/ServicesCard";
+import Button from "@/components/ui/Button";
+import ServicesData from "@/data/ServicesData";
 
-
+// export const metadata = {
+//   title: "Home | Ecommerce Inside",
+//   description:
+//     "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+// };
 export const metadata = {
-  title: "Home | Ecommerce Inside",
+  title: "Ecommerce Inside",
   description:
     "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    icons: [{ rel: "icon", url: "/images/favicon.webp" }],
 };
-
 const Home: NextPage = () => {
   return (
     <div className="">

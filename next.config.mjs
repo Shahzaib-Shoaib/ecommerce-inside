@@ -1,5 +1,4 @@
 
-// await import("./src/env.mjs");
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -10,6 +9,10 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  pwa: {
+    dest: 'public',
+    disable: process.env.NODE_ENV === 'development',
+  },
 
   i18n: {
     locales: ["en"],
@@ -17,3 +20,4 @@ const config = {
   },
 };
 export default config;
+

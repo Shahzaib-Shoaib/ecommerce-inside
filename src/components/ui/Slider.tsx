@@ -4,7 +4,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import "swiper/swiper-bundle.css";
-import SwiperCore from "swiper";
 export {
     Navigation,
     Thumbs,

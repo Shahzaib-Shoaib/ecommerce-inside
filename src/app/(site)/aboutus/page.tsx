@@ -1,9 +1,9 @@
 import { NextPage } from "next";
-import Banner from "~/components/Banner";
-import InfoSec from "~/components/InfoSec";
-import AboutStrategySlider from "~/components/Sliders/AboutStrategySlider";
-import Button from "~/components/ui/Button";
-import InfoSecData from "~/data/InfoSecData";
+import Banner from "@/components/Banner";
+import InfoSec from "@/components/InfoSec";
+import AboutStrategySlider from "@/components/Sliders/AboutStrategySlider";
+import Button from "@/components/ui/Button";
+import InfoSecData from "@/data/InfoSecData";
 
 export const metadata = {
   title: "Abouts US | Ecommerce Inside",

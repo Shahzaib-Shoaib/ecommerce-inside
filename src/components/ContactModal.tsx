@@ -5,7 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Button from "./ui/Button";
-import useRQGlobalState from "~/utils/useRQGlobalState";
+import useRQGlobalState from "@/utils/useRQGlobalState";
 import ErrorAlert from "./ui/ErrorAlert";
 
 type FormData = {

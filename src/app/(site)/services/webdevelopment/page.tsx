@@ -1,11 +1,11 @@
 import { NextPage } from "next";
-import Banner from "~/components/Banner";
-import ServicesTabsSec from "~/components/services/ServicesTabsSec";
-import ServicesIntroSec from "~/components/services/ServicesIntroSec";
+import Banner from "@/components/Banner";
+import ServicesTabsSec from "@/components/services/ServicesTabsSec";
+import ServicesIntroSec from "@/components/services/ServicesIntroSec";
 import { ReactNode } from "react";
-import TrustCTA from "~/components/services/TrustCTA";
-import GalleySec from "~/components/services/GallerySec";
-import ServicesPackagesSec from "~/components/services/ServicesPackagesSec";
+import TrustCTA from "@/components/services/TrustCTA";
+import GalleySec from "@/components/services/GallerySec";
+import ServicesPackagesSec from "@/components/services/ServicesPackagesSec";
 
 export const metadata = {
   title: "Web Development | Ecommerce Inside",

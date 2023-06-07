@@ -1,8 +1,8 @@
 "use client";
 
-import React, { FC, MouseEventHandler, useEffect, useState } from "react";
-import packageCatagories from "~/data/packageCatagories";
-import packages from "~/data/packages";
+import React, { FC, useEffect, useState } from "react";
+import packageCatagories from "@/data/packageCatagories";
+import packages from "@/data/packages";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode } from "swiper";
 import "swiper/css";
@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 import PackageCard from "./PackageCard";
-import packagesGallery from "~/data/PackagesGallery";
+import packagesGallery from "@/data/PackagesGallery";
 import PortfolioGalleryCard from "./PortfolioGalleryCard";
 
 

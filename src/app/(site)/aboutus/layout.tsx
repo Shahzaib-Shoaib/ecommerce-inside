@@ -1,5 +1,5 @@
 
-import Agencies from "~/components/Agencies";
+import Agencies from "@/components/Agencies";
 
 const AboutLayout = ({ children }: { children: React.ReactNode }) => {
   return (

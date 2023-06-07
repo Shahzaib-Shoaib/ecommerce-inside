@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, ReactNode, useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import { HiPlusSm } from "react-icons/hi";
 import Lightbox from "yet-another-react-lightbox";
@@ -7,7 +7,7 @@ import Counter from "yet-another-react-lightbox/plugins/counter";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/counter.css";
-import * as galleryStyles from "~/styles/gallery.module.css";
+import * as galleryStyles from "@/styles/gallery.module.css";
 
 type PackagesGalleryType = {
   id: string;

@@ -6,7 +6,7 @@ import Counter from "yet-another-react-lightbox/plugins/counter";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/counter.css";
-import * as galleryStyles from "~/styles/gallery.module.css";
+import * as galleryStyles from "@/styles/gallery.module.css";
 import PortfolioGalleryCard from "../Packages/PortfolioGalleryCard";
 
 type GallerySecType = {

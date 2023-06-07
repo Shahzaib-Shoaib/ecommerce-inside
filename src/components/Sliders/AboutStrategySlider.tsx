@@ -1,13 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, FreeMode } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/swiper-bundle.css";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
-import aboutStrategyData from "~/data/aboutstrategyData";
-
+import aboutStrategyData from "@/data/aboutStrategyData";
+import {Navigation,FreeMode,Swiper,SwiperSlide} from "@/components/ui/Slider";
 
 const AboutStrategySlider = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);

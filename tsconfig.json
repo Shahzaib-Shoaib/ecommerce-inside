@@ -20,24 +20,25 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
+    "noImplicitAny": false,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
+      "@/*": [
         "./src/*"
       ],
-      "~/components/*": [
+      "@/components/*": [
         "./src/components/*"
       ],
-      "~/images/*": [
+      "@/images/*": [
         "./public/assets/images/*"
       ],
-      "~/icons/*": [
+      "@/icons/*": [
         "./public/assets/icons/*"
       ],
-      "~/styles/*": [
+      "@/styles/*": [
         "./src/styles/*"
       ],
-      "~/data/*": [
+      "@/data/*": [
         "./src/data/*"
       ]
     },

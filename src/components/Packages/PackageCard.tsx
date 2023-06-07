@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import Button from "../ui/Button";
 import Link from "next/link";
 
@@ -16,9 +16,9 @@ const PackageCard = ({ data }: { data: PackageType }) => {
   return (
     <div className="package_card group flex flex-col rounded-lg border-2 border-darkblue p-[35px] duration-300 hover:bg-darkblue">
       <div className="title">
-        <h6 className="text-[22px] font-normal text-black group-hover:text-white w-[65%]">
+        <h3 className="text-[22px] font-normal text-black group-hover:text-white w-[65%]">
           {data.name}
-        </h6>
+        </h3>
         <div className="flex gap-2">
           <p className="font-medium text-gray-400 line-through group-hover:text-caribbeangreen">
             {data.price}
@@ -27,9 +27,9 @@ const PackageCard = ({ data }: { data: PackageType }) => {
             ONLY
           </p>
         </div>
-        <h3 className="font-extrabold text-caribbeangreen group-hover:text-white">
+        <h6 className="font-extrabold text-caribbeangreen group-hover:text-white">
           {data.discprice}
-        </h3>
+        </h6>
         <p className=" font-medium group-hover:text-white">{data.desc}</p>
       </div>
 

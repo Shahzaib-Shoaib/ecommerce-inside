@@ -171,3 +171,8 @@ input[type]:focus {
   content: "\27A4";
   margin-right: 11px;
 }
+
+input[required] + label:after {
+	content: '*';
+	color: red;
+  }

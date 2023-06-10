@@ -16,28 +16,28 @@ const PackageCard = ({ data }: { data: PackageType }) => {
   return (
     <div className="package_card group flex flex-col rounded-lg border-2 border-darkblue p-[35px] duration-300 hover:bg-darkblue">
       <div className="title">
-        <h3 className="text-[22px] font-normal text-black group-hover:text-white w-[65%]">
+        <h5 className="font-semibold text-black group-hover:text-white w-[75%]">
           {data.name}
-        </h3>
-        <div className="flex gap-2">
-          <p className="font-medium text-gray-400 line-through group-hover:text-caribbeangreen">
+        </h5>
+        <div className="flex gap-2 py-3">
+          <h6 className="text-gray-900 line-through group-hover:text-caribbeangreen">
             {data.price}
-          </p>
-          <p className="font-medium text-gray-400 group-hover:text-caribbeangreen">
+          </h6>
+          <h6 className="font-medium text-gray-900 group-hover:text-caribbeangreen">
             ONLY
-          </p>
+          </h6>
         </div>
-        <h6 className="font-extrabold text-caribbeangreen group-hover:text-white">
+        <h1 className="text-[42px] font-extrabold text-caribbeangreen group-hover:text-white">
           {data.discprice}
-        </h6>
-        <p className=" font-medium group-hover:text-white">{data.desc}</p>
+        </h1>
+        <p className="pt-3 text-[12px] leading-5 font-medium group-hover:text-white">{data.desc}</p>
       </div>
 
       <div className="my-5 h-40 overflow-y-auto">
-        <ul>
+        <ul className="px-5 list-disc">
           {data.points?.map((point) => (
             <li
-              className=" mb-[5px] text-[16px] group-hover:text-white "
+              className="text-[12px] leading-5 group-hover:text-white "
               key={point}
             >
               {point}
@@ -47,10 +47,10 @@ const PackageCard = ({ data }: { data: PackageType }) => {
       </div>
 
       <div className="mb-5 flex items-center justify-center">
-        <Button variant="Dark" >Order Now</Button>
+        <Button variant="Dark" href={`/order/${data.id}`}>  Order Now  </Button>
       </div>
       <div className="flex flex-col items-center justify-center gap-1">
-        <p className="text-[16px] text-caribbeangreen group-hover:text-white mb-1">
+        <p className="text-[14px] text-caribbeangreen group-hover:text-white mb-1">
           Share your idea?
         </p>
         <Link

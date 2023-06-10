@@ -5,6 +5,7 @@ import {Autoplay,Navigation,useSwiper,Swiper,SwiperSlide} from "@/components/ui/
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 import ProjectsData from "@/data/ProjectsData";
 import Button from "../ui/Button";
+import Image from "next/image";
 
 const ProjectSlider = () => {
   SwiperCore.use([Autoplay]);
@@ -28,16 +29,18 @@ const ProjectSlider = () => {
       {ProjectsData.map((project) => (
         <SwiperSlide key={project.id}>
           <div className="grid gap-7 sm:grid-cols-1 2xl:grid-cols-2 3xl:grid-cols-2 4xl:grid-cols-2 5xl:grid-cols-2 6xl:grid-cols-2">
-            <div className="slider_data flex flex-col justify-center">
-              <h6 className="font-bold text-[20px]">PROJECT</h6>
-              <h6 className="mb-9 font-normal text-[20px]">{project.projectType}</h6>
-              <h1 className="font-bold mb-2">{project.projectName}</h1>
+          <div className="slider_data flex flex-col justify-center">
+              <h4 className="font-bold">PROJECT</h4>
+              <h6 className="mb-9">{project.projectType}</h6>
+              <h2 className="pb-6 text-[52px] font-bold">
+                {project.projectName}
+              </h2>
               <p className="mb-5">{project.projectDesc}</p>
-              <Button variant="Dark" >Case Study</Button>
+              <Button variant="Dark">Case Study</Button>
             </div>
 
             <div className="slider_img">
-              <img src={`/images${project.image}`} alt="Slider Project Image" />
+              <Image width={930} height={590} src={`/images${project.image}`} alt="Slider Project Image" />
             </div>
           </div>
         </SwiperSlide>

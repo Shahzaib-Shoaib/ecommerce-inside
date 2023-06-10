@@ -8,22 +8,12 @@ import ServicesCardsSlider from "@/components/Sliders/ServicesCardsSlider";
 import ServicesCard from "@/components/cards/ServicesCard";
 import Button from "@/components/ui/Button";
 import ServicesData from "@/data/ServicesData";
+import useRQGlobalState from "@/utils/useRQGlobalState";
 
-// export const metadata = {
-//   title: "Home | Ecommerce Inside",
-//   description:
-//     "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
-// };
-// export const metadata = {
-//   title: "Ecommerce Inside",
-//   description:
-//     "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
-//     icons: [{ rel: "icon", url: "/images/favicon.webp" }],
-// };
 const Home: NextPage = () => {
+  const [modalActive, setModalActive]:any = useRQGlobalState("modal", false);
   return (
     <div className="">
-      {/* <MyModal /> */}
       <HeroSlider />
 
       {/* Info Section */}
@@ -43,7 +33,7 @@ const Home: NextPage = () => {
           <h1 className="pb-[36px] text-center text-caribbeangreen">
             An Incredible Intersection of Creativity and Tech
           </h1>
-          <p className="pb-[36px] text-center  font-semibold">
+          <p className="pb-[36px] text-center">
             A full service digital marketing platform that caters to every scope
             from marketing to the brand building along with a wide range of
             latest IT solutions. We are rated as USA’s best digital marketing
@@ -59,7 +49,7 @@ const Home: NextPage = () => {
             needs & make it count with the top digital marketing companies in
             the UAE.
           </p>
-          <Button variant="Green">Let's Get Your Project Started</Button>
+          <Button variant="Green" onClick={() => setModalActive(true)}>Let's Get Your Project Started</Button>
         </div>
       </section>
 
@@ -68,9 +58,9 @@ const Home: NextPage = () => {
         <h2 className="pb-[10px] text-center">
           Ecommerce Inside Plans & Pricing
         </h2>
-        <h5 className="text-center font-normal text-[#666] ">
+        <h4 className="text-center font-normal text-[#666] ">
           Affordable Price Packages
-        </h5>
+        </h4>
         <Packages />
       </section>
 
@@ -81,14 +71,14 @@ const Home: NextPage = () => {
 
       {/* Project Services Section */}
       <section className="overflow-hidden px-0">
-        <div className="div_container">
-          <h6 className="pb-[10px] text-center text-darkgray">
+        <div className="div_container px-[15px]">
+          <h4 className="pb-[10px] text-center font-medium text-darkgray">
             Upscale and Leverage Brand Growth
-          </h6>
+          </h4>
           <h2 className="text-balack pb-[36px] text-center">
             With the Digital Marketing Company in USA
           </h2>
-          <p className="pb-[36px] text-center  font-semibold text-darkgray">
+          <p className="pb-[36px] text-center   text-darkgray">
             Allow us to take your brand to new heights with the ultra modern
             marketing strategies and improve your brand’s digital visibility.
             Our professionals with decades of experience and marketing expertise
@@ -100,9 +90,9 @@ const Home: NextPage = () => {
           <ServicesCardsSlider data={ServicesData} />
         </div>
         <div className="hidden xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block">
-          <div className="grid xl:grid-cols-1 2xl:grid-cols-2 3xl:grid-cols-4 4xl:grid-cols-4 5xl:grid-cols-4 6xl:grid-cols-4 ">
+          <div className="grid xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-4 4xl:grid-cols-4 5xl:grid-cols-4 6xl:grid-cols-4 ">
             <div
-              className={`flex h-[450px]  flex-col justify-center border bg-caribbeangreen  bg-center px-[15px] md:px-[50px]`}
+              className={`flex h-[450px]  flex-col justify-center border bg-caribbeangreen  bg-center px-[15px] md:px-[50px] xl:h-[300px] 2xl:h-[350px] 3xl:h-[380px] 4xl:h-[380px] 5xl:h-[380px] 6xl:h-[380px]`}
             >
               <div className=" flex flex-col group-hover:hidden">
                 <h3 className="text-h3 font-bold text-white ">Our Services</h3>
@@ -113,12 +103,12 @@ const Home: NextPage = () => {
                   industry and audience requirements. We help you come forward
                   and up your brand’s game.
                 </p>
-                <a
+                {/* <a
                   href="#"
                   className="text-sm uppercase text-white hover:text-black"
                 >
                   CHECK OUT OUR SERVICES HERE{" "}
-                </a>
+                </a> */}
               </div>
             </div>
             {ServicesData.map((service, index) => (
@@ -128,15 +118,15 @@ const Home: NextPage = () => {
         </div>
 
         <div className=" div_container mx-auto flex items-center justify-center pt-[50px]">
-          <h6 className="mx-auto flex items-center justify-center   font-extrabold text-darkblue ">
+          <h3 className="mx-auto flex items-center justify-center   font-extrabold text-darkblue ">
             Hire{" "}
-            <img
+            <Image width={240} height={272}
               src="/images/service-cta-icon.webp"
               alt="cta icon"
               className="mx-4 w-[50px] animate-grow-shrink"
             />
             and Grow your Brand with your next Design/Development Project.
-          </h6>
+          </h3>
         </div>
       </section>
 
@@ -144,13 +134,13 @@ const Home: NextPage = () => {
         <div className=" div_container relative mx-auto">
           <div className=" grid place-content-center gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-2 4xl:grid-cols-2 5xl:grid-cols-2 6xl:grid-cols-2">
             <div className="combo_offer_content">
-              <h3 className="mb-[15px] text-[30px] font-bold leading-[1.2] text-white xl:text-[45px]">
+              <h2 className="mb-[15px] text-[30px] font-bold leading-[1.2] text-white xl:text-[45px]">
                 Business Setup
                 <br /> All-in-One Package
-              </h3>
-              <p className=" mb-[10px] text-[16px] uppercase tracking-[0.5px] text-caribbeangreen xl:text-[22px] ">
+              </h2>
+              <h4 className=" mb-[10px] text-[16px] uppercase tracking-[0.5px] text-caribbeangreen xl:text-[22px] ">
                 WE UNDERSTAND WHAT’S BEST FOR YOUR BUSINESS
-              </p>
+              </h4>
               <p className="mb-[15px] text-[16px] text-white ">
                 Ecommerce Inside offers branding solutions to expand your reach
                 and establish an online presence. Our combo packages fit for
@@ -197,14 +187,14 @@ const Home: NextPage = () => {
                       Newsletter Design
                     </li>
                   </ul>
-                  <Button variant="Green" >
+                  <Button variant="Green" onClick={() => setModalActive(true)}>
                     Let's Get Started
                   </Button>
                 </div>
               </div>
             </div>
             <div className="combo_image flex items-center justify-center sm:hidden md:hidden">
-              <img src="/images/combo_offer.webp" alt="" className="m-auto" />
+              <Image width={1000} height={700} src="/images/combo_offer.webp" alt="" className="m-auto" />
             </div>
           </div>
         </div>

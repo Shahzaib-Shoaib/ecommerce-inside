@@ -33,7 +33,7 @@ const OrderNow = ({
     formState: { errors },
   } = useForm();
 
-  const [personalInfo, setPersonalInfo] = useRQGlobalState("personalInfo", false);
+  const [personalInfo, setPersonalInfo]:any = useRQGlobalState("personalInfo", false);
   
   const onContact = (data: FormData) => {
     console.log(data);

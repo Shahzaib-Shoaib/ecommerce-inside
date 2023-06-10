@@ -1,13 +1,10 @@
+'use client'
 import { NextPage } from "next";
 import Link from "next/link";
 import Banner from "@/components/Banner";
 import servicesqualityData from "@/data/servicesqualityData";
 
-export const metadata = {
-  title: "Services | Ecommerce Inside",
-  description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
-};
+
 
 const Services: NextPage = () => {
 
@@ -22,15 +19,11 @@ const Services: NextPage = () => {
         desc={null}
       />
 
-      
-
       <section className="overflow-hidden">
         <div className="div_container">
-          
-
           <div className="headings flex flex-col items-center justify-center">
             <h5 className="text-[#666] font-semibold">Grow Your Brand</h5>
-            <h1 className="font-bold text-[#1b1037] text-[45px] py-5 leading-[1]">
+            <h1 className="font-bold text-[#1b1037] text-[45px] py-5 leading-[1] text-center">
               With Top
               <span className="text-caribbeangreen text-[45px]"> Quality Services</span>
             </h1>
@@ -72,13 +65,8 @@ const Services: NextPage = () => {
               ))
             }
           </div>
-          
-
-
         </div>
       </section>
-
-
     </div>
   );
 };

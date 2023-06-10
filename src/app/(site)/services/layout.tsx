@@ -1,7 +1,11 @@
 import React from "react";
 import InfoSec from "@/components/InfoSec";
 import InfoSecData from "@/data/InfoSecData";
-
+export const metadata = {
+  title: "Services | Ecommerce Inside",
+  description:
+    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+};
 const ServicesLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="content">

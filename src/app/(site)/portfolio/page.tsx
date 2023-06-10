@@ -35,7 +35,7 @@ const Portfolio: NextPage = () => {
       </section>
 
       <section className="overflow-hidden">
-        <div className="div_container">
+        <div className="div_container px-[15px]">
           <h2 className="pb-[10px] text-center ">Built to last</h2>
           <h5 className="text-center font-normal text-[#666] ">
             We helped ISi build an App that helps Isi speakers to be different

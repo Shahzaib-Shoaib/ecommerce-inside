@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type ServicesDataType = {
   id: string;
@@ -13,14 +14,16 @@ type ServicesDataType = {
 const ServicesCard = ({ service }: { service: ServicesDataType }) => {
   return (
     <div
-      className={`group relative flex h-[450px] flex-col justify-center border  bg-cover bg-center bg-no-repeat px-[15px] md:px-[50px]`}
+      className={`group relative flex h-[450px] flex-col justify-center border  bg-cover bg-center bg-no-repeat px-[15px] md:px-[50px]  xl:h-[300px] 2xl:h-[350px] 3xl:h-[380px] 4xl:h-[380px] 5xl:h-[380px] 6xl:h-[380px]`}
       style={{ backgroundImage: `url(/images${service.img})` }}
     >
       <div className="flex flex-col group-hover:hidden">
-        <img
+        <Image 
+          width={56} 
+          height={56}
           src={`/images${service.icon}`}
           alt=""
-          className="h-[54px] w-[50px] pb-[15px] "
+          className="pb-[15px]"
         />
         <h3 className="md:text-base2 pb-[20px] text-h4 font-bold text-white">
           {service.title}
@@ -28,7 +31,7 @@ const ServicesCard = ({ service }: { service: ServicesDataType }) => {
         <ul className="flex list-none flex-wrap">
           {service.cat.map((catagory) => (
             <li
-              className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-400 first:border-l-0 first:pl-0"
+              className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-900 first:border-l-0 first:pl-0"
               key={catagory}
             >
               {catagory}
@@ -43,7 +46,7 @@ const ServicesCard = ({ service }: { service: ServicesDataType }) => {
         <ul className="flex list-none flex-wrap">
           {service.cat.map((catagory) => (
             <li
-              className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-400 first:border-l-0 first:pl-0"
+              className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-900 first:border-l-0 first:pl-0"
               key={catagory}
             >
               {catagory}
@@ -51,9 +54,9 @@ const ServicesCard = ({ service }: { service: ServicesDataType }) => {
           ))}
         </ul>
         <p className=" pt-3 text-sm text-white">{service.desc}</p>
-        <a href={service.link} className="text-sm text-caribbeangreen">
+        {/* <a href={service.link} className="text-sm text-caribbeangreen">
           Read More
-        </a>
+        </a> */}
       </div>
     </div>
   );

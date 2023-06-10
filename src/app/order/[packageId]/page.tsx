@@ -3,13 +3,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import ContactInfo from "@/components/OrderProcess/ContactInfo";
-import Brief from "@/components/OrderProcess/Steps/Brief";
-import OrderNow from "@/components/OrderProcess/Steps/OrderNow";
-import Payment from "@/components/OrderProcess/Steps/Payment";
 import Button from "@/components/ui/Button";
 import ErrorAlert from "@/components/ui/ErrorAlert";
 import packages from "@/data/packages";
-import { type } from "os";
 
 type paramsType = {
   packageId: string;
@@ -88,18 +84,6 @@ const OrderPage = ({ params }: { params: paramsType }) => {
       window.Email.send(emailConfig)
     }
   };
-
-  // const displaySteps = (step:Number) => {
-  //   switch(step){
-  //     case 1:
-  //       return <OrderNow selectedpackage={orderPackage} changeStep={()=>changeStep()} />
-  //     case 2 :
-  //       return <Brief changeStep={()=>changeStep()}  />
-  //     case 3:
-  //        return <Payment />
-  //     default:
-  //   }
-  // }
 
   return (
     <div className="order_page">

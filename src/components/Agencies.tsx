@@ -4,21 +4,22 @@ import AgenciesData from "@/data/AgenciesData";
 import { useSwiper } from "swiper/react";
 import SwiperCore from "swiper";
 import {Autoplay,Pagination,A11y, FreeMode ,Swiper,SwiperSlide} from "@/components/ui/Slider";
+import Image from "next/image";
 
 const Agencies: FC = () => {
   SwiperCore.use([Autoplay, Pagination, A11y]);
   const swiper = useSwiper();
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden px-0">
       <div className="div_container">
-        <h6 className="pb-[10px] text-center text-darkgray">
+        <h4 className="pb-[10px] text-center font-medium text-darkgray">
           Top Digital Marketing Agencies in USA
-        </h6>
+        </h4>
         <h2 className="text-balack pb-[36px] text-center">
           Ecommerce Inside is a name of excellence, expertise, and
           efficaciousness.
         </h2>
-        <p className="pb-[36px] text-center  font-semibold text-darkgray">
+        <p className="pb-[36px] text-center text-darkgray">
           We are a team of experts from marketing and tech domains who master in
           producing the results you're anticipating for.
         </p>
@@ -27,12 +28,12 @@ const Agencies: FC = () => {
       <div className="grid grid-cols-4 gap-2 sm:hidden md:hidden">
         {AgenciesData.map((agency) => (
           <div className="group relative flex flex-col items-center justify-center border bg-cover bg-center bg-no-repeat" key={agency.id}>
-            <img
+            <Image width={476} height={474}
               src={`/images/${agency.bgIMG}`}
               alt=""
               className="object-cover"
             />
-            <img
+            <Image width={200} height={200}
               src={`/images/${agency.clientIMG}`}
               alt=""
               className="absolute duration-150 group-hover:scale-110"
@@ -56,12 +57,12 @@ const Agencies: FC = () => {
           {AgenciesData.map((agency) => (
             <SwiperSlide key={agency.id}>
               <div className="group relative flex flex-col items-center justify-center border bg-cover bg-center bg-no-repeat">
-                <img
+                <Image width={476} height={474}
                   src={`/images/${agency.bgIMG}`}
                   alt=""
                   className="object-cover"
                 />
-                <img
+                <Image width={200} height={200}
                   src={`/images/${agency.clientIMG}`}
                   alt=""
                   className="absolute duration-150 group-hover:scale-110"

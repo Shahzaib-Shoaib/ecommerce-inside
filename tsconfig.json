@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,
@@ -23,25 +19,8 @@
     "noImplicitAny": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/images/*": [
-        "./public/assets/images/*"
-      ],
-      "@/icons/*": [
-        "./public/assets/icons/*"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ],
-      "@/data/*": [
-        "./src/data/*"
-      ]
-    },
+			"@/*": ["./src/*"]
+		},
     "plugins": [
       {
         "name": "next"
@@ -56,8 +35,11 @@
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+, "next.config.js"  ],
+  "exclude": [ "node_modules" ],
+  // "ts-node": {
+	// 	"compilerOptions": {
+	// 		"module": "commonjs"
+	// 	}
+	// }
 }

@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Contact | Ecommerce Inside",
+  description:
+    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+};
 
 
 const ContactLayout = ({ children }: { children: React.ReactNode }) => {

@@ -7,7 +7,7 @@ const robots = (): MetadataRoute.Robots => {
             allow: '/',
             disallow: ['/admin/', '/page/'],
         },
-        sitemap: 'https://ecommerce-inside.vercel.app//sitemap.xml',
+        sitemap: 'https://ecommerce-inside.vercel.app/sitemap.xml',
     };
 };
 export default robots;

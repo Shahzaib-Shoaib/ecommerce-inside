@@ -2,11 +2,7 @@ import { NextPage } from "next";
 import ContactForm from "@/components/ContactForm";
 import ContactSlider from "@/components/Sliders/ContactSlider";
 
-export const metadata = {
-  title: "Contact | Ecommerce Inside",
-  description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
-};
+
 
 const Contact: NextPage = () => {
   return (

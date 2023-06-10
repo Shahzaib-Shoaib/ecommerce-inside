@@ -3,11 +3,9 @@ import { type Config } from "tailwindcss";
 export default {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./src/app/**/*.{js,ts,jsx,tsx}",
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/hooks/**/*.{js,ts,jsx,tsx}",
-    "./src/utils/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}", // Note the addition of the `app` directory.
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -27,74 +25,9 @@ export default {
         black: "#000000",
         white: "#ffffff",
         darkblue: "#201949",
-        caribbeangreen: "#00E2A1",
+        caribbeangreen: "#0DE2A3",
         dark: "#0f0c16",
         darkgray: "#666",
-      },
-      fontSize: {
-        // sm: [fontSize, lineHeight],
-        sm: ["14px", "20px"],
-        base: ["16px", "24px"],
-        lg: ["20px", "28px"],
-        xl: ["24px", "32px"],
-
-        //tagName ['fontSize', { lineHeight?, letterSpacing?, fontWeight? }]
-        h1: [
-          "2.25rem",
-          {
-            lineHeight: "2.75rem",
-            fontWeight: "500",
-          },
-        ],
-        h2: [
-          "1.875rem",
-          {
-            lineHeight: "2.375rem",
-          },
-        ],
-        h3: [
-          "1.5rem",
-          {
-            lineHeight: "2rem",
-          },
-        ],
-        h4: [
-          "1.25rem",
-          {
-            lineHeight: "1.75rem",
-          },
-        ],
-        h5: [
-          "1.125rem",
-          {
-            lineHeight: "1.625rem",
-          },
-        ],
-        h6: [
-          "1rem",
-          {
-            lineHeight: "1.5rem",
-          },
-        ],
-        p: [
-          "0.9rem",
-          {
-            lineHeight: "1.1rem",
-          },
-        ],
-        span: [
-          "0.9rem",
-          {
-            lineHeight: "1.1rem",
-          },
-        ],
-        quote: [
-          "1.125rem",
-          {
-            lineHeight: "1.75rem",
-            fontWeight: "600",
-          },
-        ],
       },
       keyframes:{
         "move-left": {

@@ -4,22 +4,22 @@
 
 @layer base {
   h1,.h1 {
-    @apply font-semibold text-[28px] leading-[32px] sm:text-[28px] md:text-[28px] lg:text-[28px] xl:text-[28px] 2xl:text-[28px] 3xl:text-[36px]  5xl:text-[40px] 6xl:text-[40px] sm:leading-[32px] md:leading-[32px] lg:leading-[32px] xl:leading-[32px] 2xl:leading-[32px] 3xl:leading-[40px] 4xl:leading-[45px] 5xl:leading-[45px] 6xl:leading-[45px]
+    @apply font-bold 6xl:text-[42px] 6xl:leading-[52px] 5xl:text-[40px] 5xl:leading-[50px] 4xl:text-[38px] 4xl:leading-[48px] 3xl:text-[36px] 3xl:leading-[46px] 2xl:text-[34px] 2xl:leading-[44px] xl:text-[32px] xl:leading-[42px] lg:text-[32px] lg:leading-[42px] md:text-[20px] md:leading-[30px] sm:text-[30px] sm:leading-[40px]
   }
   h2,.h2 {
-    @apply font-semibold text-[26px] leading-[30px] sm:text-[26px] md:text-[26px] lg:text-[26px] xl:text-[26px] 2xl:text-[26px] 3xl:text-[34px] 4xl:text-[38px] 5xl:text-[38px] 6xl:text-[38px] sm:leading-[30px] md:leading-[30px] lg:leading-[30px] xl:leading-[30px] 2xl:leading-[30px] 3xl:leading-[38px] 4xl:leading-[43px] 5xl:leading-[43px] 6xl:leading-[43px]
+    @apply font-bold 6xl:text-[36px] 6xl:leading-[46px] 5xl:text-[34px] 5xl:leading-[44px] 4xl:text-[32px] 4xl:leading-[42px] 3xl:text-[30px] 3xl:leading-[40px] 2xl:text-[28px] 2xl:leading-[38px] xl:text-[26px] xl:leading-[36px] lg:text-[26px] lg:leading-[36px] md:text-[32px] md:leading-[40px] sm:text-[24px] sm:leading-[34px]
   }
   h3,.h3 {
-    @apply font-semibold text-[24px] leading-[28px] sm:text-[24px] md:text-[24px] lg:text-[24px] xl:text-[24px] 2xl:text-[24px] 3xl:text-[32px] 4xl:text-[36px] 5xl:text-[36px] 6xl:text-[36px] sm:leading-[28px] md:leading-[28px] lg:leading-[28px] xl:leading-[28px] 2xl:leading-[28px] 3xl:leading-[36px] 4xl:leading-[41px] 5xl:leading-[41px] 6xl:leading-[41px]
+    @apply font-semibold 6xl:text-[30px] 6xl:leading-[40px] 5xl:text-[28px] 5xl:leading-[38px] 4xl:text-[26px] 4xl:leading-[36px] 3xl:text-[24px] 3xl:leading-[34px] 2xl:text-[22px] 2xl:leading-[32px] xl:text-[20px] xl:leading-[30px] lg:text-[20px] lg:leading-[30px] md:text-[18px] md:leading-[28px] sm:text-[18px] sm:leading-[28px]
   }
   h4,.h4 {
-    @apply font-semibold text-[22px] leading-[26px] sm:text-[22px] md:text-[22px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] 3xl:text-[30px] 4xl:text-[34px] 5xl:text-[34px] 6xl:text-[34px] sm:leading-[26px] md:leading-[26px] lg:leading-[26px] xl:leading-[26px] 2xl:leading-[26px] 3xl:leading-[34px] 4xl:leading-[38px] 5xl:leading-[38px] 6xl:leading-[38px]
+    @apply font-semibold 6xl:text-[24px] 6xl:leading-[34px] 5xl:text-[22px] 5xl:leading-[32px] 4xl:text-[20px] 4xl:leading-[30px] 3xl:text-[18px] 3xl:leading-[28px] 2xl:text-[16px] 2xl:leading-[26px] xl:text-[16px] xl:leading-[26px] lg:text-[16px] lg:leading-[26px] md:text-[16px] md:leading-[26px] sm:text-[16px] sm:leading-[26px]
   }
   h5,.h5 {
-    @apply font-semibold text-[20px] leading-[24px] sm:text-[20px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] 3xl:text-[28px] 4xl:text-[32px] 5xl:text-[32px] 6xl:text-[32px] sm:leading-[24px] md:leading-[24px] lg:leading-[24px] xl:leading-[24px] 2xl:leading-[24px] 3xl:leading-[32px] 4xl:leading-[36px] 5xl:leading-[36px] 6xl:leading-[36px]
+    @apply text-[20px] leading-[30px] font-medium
   }
   h6,.h6 {
-    @apply font-semibold text-[18px] leading-[22px] sm:text-[18px] md:text-[18px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[26px] 4xl:text-[30px] 5xl:text-[30px] 6xl:text-[30px] sm:leading-[22px] md:leading-[22px] lg:leading-[22px] xl:leading-[22px] 2xl:leading-[22px] 3xl:leading-[30px] 4xl:leading-[34px] 5xl:leading-[34px] 6xl:leading-[34px]
+    @apply text-[16px] leading-[26px] font-medium
   }
   p,.p {
     @apply text-[16px] leading-[22px]
@@ -37,19 +37,20 @@
     @apply px-[15px] py-[50px] border-b border-[#ccc]
   }
   .fluid_container {
-    @apply mx-auto flex flex-col items-center justify-center max-w-[1800px]  sm:px-[15px]  md:px-[20px]  lg:px-[40px]  xl:px-[40px]  2xl:px-[40px]  3xl:px-[40px] 4xl:px-[100px]   5xl:px-[140px] 6xl:px-[140px]
+    @apply mx-auto flex flex-col items-center justify-center max-w-[1800px]  
+    /* sm:px-[15px]  md:px-[20px]  lg:px-[40px]  xl:px-[40px]  2xl:px-[40px]  3xl:px-[40px] 4xl:px-[100px]   5xl:px-[140px] 6xl:px-[140px] */
   }
   .div_container {
     @apply max-w-[1200px] mx-auto
   }
   .arrow_list {
-    @apply before:content-['\2023'] before:absolute before:text-[26px]  before:text-caribbeangreen before:-top-[10px] before:-left-3
+    @apply before:content-['\2023'] before:absolute before:text-[26px]  before:text-caribbeangreen before:-top-[10px] before:-left-3 
   }
   .listTickColor {
     @apply text-caribbeangreen
   }
   .heroRounded {
-    @apply sm:rounded-br-[70px] md:rounded-br-[120px] lg:rounded-br-[120px] xl:rounded-br-[120px] 2xl:rounded-br-[120px] 3xl:rounded-br-[120px] 4xl:rounded-br-[200px] 5xl:rounded-br-[200px] 6xl:rounded-br-[200px] sm:pl-[20px] sm:pr-[30px] md:pl-[30px] md:pr-[40px] lg:pl-[40px] lg:pr-[50px] xl:pl-[40px] xl:pr-[50px]  2xl:pl-[40px] 2xl:pr-[50px] 3xl:pl-[40px] 3xl:pr-[50px] 4xl:pl-[30px] 4xl:pr-[50px] 5xl:pl-[30px] 5xl:pr-[70px] 6xl:pl-[50px] 6xl:pr-[90px] py-[50px]
+    @apply sm:rounded-br-[70px] md:rounded-br-[120px] lg:rounded-br-[120px] xl:rounded-br-[120px] 2xl:rounded-br-[120px] 3xl:rounded-br-[120px] 4xl:rounded-br-[200px] 5xl:rounded-br-[200px] 6xl:rounded-br-[200px] sm:pl-[20px] sm:pr-[30px] md:pl-[30px] md:pr-[40px] lg:pl-[40px] lg:pr-[50px] xl:pl-[40px] xl:pr-[50px]  2xl:pl-[40px] 2xl:pr-[50px] 3xl:pl-[40px] 3xl:pr-[50px] 4xl:pl-[30px] 4xl:pr-[50px] 5xl:pl-[30px] 5xl:pr-[70px] 6xl:pl-[50px] 6xl:pr-[90px] py-[30px]
   }
 }
 
@@ -58,7 +59,7 @@
   --dark-blue: #201949;
   --black: #000;
   --white: #fff;
-  --caribbeangreen: #00e2a1;
+  --caribbeangreen: #0DE2A3;
   --gray: #ebeaea;
 }
 
@@ -88,7 +89,7 @@
   display: inline-block;
   border: 5px;
   border-color: white !important;
-  background: var(--swiper-pagination-bullet-inactive-color, #00e2a1) !important;
+  background: var(--swiper-pagination-bullet-inactive-color, #0DE2A3) !important;
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
 }
 

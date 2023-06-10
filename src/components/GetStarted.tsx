@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import Button from "./ui/Button";
 import { useForm } from "react-hook-form";
 import ErrorAlert from "./ui/ErrorAlert";
+import Image from "next/image";
 
 type FormData = {
   name: string;
@@ -23,30 +24,43 @@ const GetStarted: FC = () => {
   }
 
   return (
-    <section className="flex h-[100vh] items-center justify-center overflow-hidden bg-[url('/images/footer-form-bg.webp')] bg-cover bg-center bg-no-repeat py-[100px]">
+    <section className="flex  items-center justify-center overflow-hidden bg-[url('/images/footer-form-bg.webp')] bg-cover bg-center bg-no-repeat py-[100px] 3xl:h-[100vh] 4xl:h-[100vh] 5xl:h-[100vh] 6xl:h-[100vh]">
       <div className="div_container">
         <div className="row grid grid-cols-1 gap-8 3xl:grid-cols-2 4xl:grid-cols-2 5xl:grid-cols-2 6xl:grid-cols-2">
           <div className="left relative m-auto hidden h-[500px] w-[500px] items-center justify-center 3xl:block 4xl:block 5xl:block 6xl:block">
             <div className="getstarted-left-circle relative m-auto">
-              <img
+              <Image width={682} height={681}
                 src="/images/footer-left-circle.webp"
                 alt="Footer Left Circle"
               />
             </div>
             <div className="getstarted-left-laptop absolute -right-[10%] -top-[8%]">
-              <img
+              <Image width={310} height={322}
                 src="/images/footer-left-laptop.webp"
                 alt="Footer Left Laptop"
               />
             </div>
             <div className="getstarted-left-img  absolute right-[25%] top-[32%] w-[73%]">
-              <img src="/images/footer-left-img.webp" alt="Footer IMG" />
+              <Image 
+              width={524} 
+              height={532} 
+              src="/images/footer-left-img.webp" 
+              alt="Footer IMG" 
+              />
+
             </div>
             <div className="getstarted-left-tree absolute left-0 top-0">
-              <img src="/images/footer-left-tree.webp" alt="Footer Left Tree" />
+              <Image 
+              width={214} 
+              height={234} 
+              src="/images/footer-left-tree.webp" 
+              alt="Footer Left Tree" 
+              />
             </div>
             <div className="getstarted-left-watch  absolute -top-[5%] left-[35%]">
-              <img
+              <Image 
+                width={8} 
+                height={182}
                 src="/images/footer-left-watch.webp"
                 alt="Footer Left Watch"
               />
@@ -54,9 +68,9 @@ const GetStarted: FC = () => {
           </div>
 
           <div className="right relative">
-            <h3 className="bg-no-repeat text-white before:absolute before:-right-[250] before:-top-[140px] before:h-[806px] before:w-[794px] before:animate-circle-spin before:bg-[url('/images/footer-right-circle.webp')] sm:before:hidden md:before:hidden lg:before:hidden xl:before:hidden 2xl:before:hidden">
+            <h2 className="bg-no-repeat pb-5 text-white before:absolute before:-right-[250] before:-top-[140px] before:h-[806px] before:w-[794px] before:animate-circle-spin before:bg-[url('/images/footer-right-circle.webp')] sm:before:hidden md:before:hidden lg:before:hidden xl:before:hidden 2xl:before:hidden">
               Let's Get Started!
-            </h3>
+            </h2>
             <p className="text-[#b4a5d6]">
               We’ve got budget-friendly solutions and flexible design packages
               that meet your needs.

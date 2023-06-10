@@ -3,11 +3,11 @@ import React, { FC } from "react";
 const Testimonials: FC = () => {
   return (
     <section className="overflow-hidden">
-      <div className="div_container">
+      <div className="div_container px-[15px]">
         <h2 className="text-balack pb-[36px] text-center">
           Testimonials From Our Clients.
         </h2>
-        <p className="pb-[36px] text-center  font-semibold text-darkgray">
+        <p className="pb-[36px] text-center  text-darkgray">
           Your Work Is Commendable, I Am Glad That I Accepted Your Offer Of
           Developing A Website For My Business. The Project Is Working Great And
           I Am Getting Daily Customers.

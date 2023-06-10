@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Button from "./ui/Button";
 import ErrorAlert from "./ui/ErrorAlert";
 import { useForm } from "react-hook-form";
 import packageCatagories from "@/data/packageCatagories";
 
 const ContactForm = () => {
+
   const {
     register,
     handleSubmit,
@@ -16,36 +17,10 @@ const ContactForm = () => {
     console.log(data);
   };
 
-  const services = [
-    {
-      id: "1",
-      name: "Services",
-    },
-    {
-      id: "2",
-      name: "Mobile Apps",
-    },
-    {
-      id: "3",
-      name: "Web Development",
-    },
-    {
-      id: "4",
-      name: "Branding",
-    },
-    {
-      id: "5",
-      name: "Digital Marketing",
-    },
-    {
-      id: "6",
-      name: "Software Solutions",
-    },
-  ];
   return (
     <div className="contact-form">
-      <div className="personal grid grid-cols-2 gap-4 ">
-        <form id="Get Started">
+      <div className="personal gap-4 ">
+        <form id="Get Started" >
           <div className="relative mb-1 mt-6 border-2 border-darkgray p-2">
             <label className="absolute -top-[18px] left-4 bg-white px-[10px] py-[3px] text-[14px] font-medium text-darkblue">
               Your Name
@@ -123,9 +98,7 @@ const ContactForm = () => {
             </select>
           </div>
           {errors.services ? (
-            <ErrorAlert
-              error={errors.services && "Please Select Services"}
-            />
+            <ErrorAlert error={errors.services && "Please Select Services"} />
           ) : null}
           <div className="relative mb-1 mt-6 border-2 border-darkgray p-2">
             <label className="absolute -top-[18px] left-4 bg-white px-[10px] py-[3px] text-[14px] font-medium text-darkblue">
@@ -142,9 +115,7 @@ const ContactForm = () => {
             />
           </div>
           {errors.desc ? (
-            <ErrorAlert
-              error={errors.desc && "Please Write Description"}
-            />
+            <ErrorAlert error={errors.desc && "Please Write Description"} />
           ) : null}
           <div className="mt-[20px]">
             <Button

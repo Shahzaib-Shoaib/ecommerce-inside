@@ -19,7 +19,7 @@ const ContactModal: FC = () => {
     formState: { errors },
   } = useForm();
 
-  const [modalActive, setModalActive] = useRQGlobalState("modal", false);
+  const [modalActive, setModalActive]:any = useRQGlobalState("modal", false);
   // if(!visible) return null;
   if (!modalActive) return null;
 

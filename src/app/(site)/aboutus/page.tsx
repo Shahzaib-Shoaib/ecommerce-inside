@@ -1,18 +1,18 @@
+'use client'
 import { NextPage } from "next";
 import Banner from "@/components/Banner";
 import InfoSec from "@/components/InfoSec";
 import AboutStrategySlider from "@/components/Sliders/AboutStrategySlider";
 import Button from "@/components/ui/Button";
 import InfoSecData from "@/data/InfoSecData";
+import useRQGlobalState from "@/utils/useRQGlobalState";
 
-export const metadata = {
-  title: "Abouts US | Ecommerce Inside",
-  description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
-};
+
+
+
 
 const AboutUs: NextPage = () => {
-
+  const [modalActive, setModalActive]:any = useRQGlobalState("modal", false);
 
 
   return (
@@ -26,11 +26,11 @@ const AboutUs: NextPage = () => {
       />
 
       <section className="overflow-hidden">
-        <div className="div_container flex flex-col flex-wrap items-center justify-between gap-3 xl:flex-row 2xl:flex-row 3xl:flex-row 4xl:flex-row 5xl:flex-row 6xl:flex-row">
-          <img src="/images/about-review-1.webp" alt="" />
-          <img src="/images/about-review-2.webp" alt="" />
-          <img src="/images/about-review-3.webp" alt="" />
-          <img src="/images/about-review-4.webp" alt="" />
+        <div className="div_container grid gap-3 grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-4 4xl:grid-cols-4 5xl:grid-cols-4 6xl:grid-cols-4">
+          <img src="/images/about-review-1.webp" alt="" className="mx-auto " />
+          <img src="/images/about-review-2.webp" alt="" className="mx-auto "/>
+          <img src="/images/about-review-3.webp" alt="" className="mx-auto "/>
+          <img src="/images/about-review-4.webp" alt="" className="mx-auto "/>
         </div>
       </section>
 
@@ -49,7 +49,7 @@ const AboutUs: NextPage = () => {
                 have in common is a drive to produce exceptional work that helps
                 our clients reach the top.
               </p>
-              <Button variant="Green"> Let's Get Started</Button>
+              <Button variant="Green" onClick={() => setModalActive(true)}> Let's Get Started</Button>
             </div>
 
             <div className="creativity_img flex items-center justify-end">
@@ -97,14 +97,7 @@ const AboutUs: NextPage = () => {
 
       </section>
 
-
       <InfoSec infocardData={InfoSecData} smallHeading={"We Deliver Our Best"} mainHeading={"Reason to Choose Us"} desc={"We are obliged to provide an incredible experience by giving high-quality eCommerce website design and development services. What makes us trustworthy partners? Here are the reasons!"} />
-
-
-
-
-
-
     </div>
   );
 };

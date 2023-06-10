@@ -6,6 +6,7 @@ import { createTRPCReact } from "@trpc/react-query";
 import { SessionProvider } from "next-auth/react";
 import { useState } from "react";
 import superjson from "superjson";
+import queryClient from "./client";
 
 export const trpc = createTRPCReact<AppRouter>({
   unstable_overrides: {
@@ -35,7 +36,6 @@ function getBaseUrl() {
 }
 
 export function ClientProvider(props: { children: React.ReactNode }) {
-  const [queryClient] = useState(() => new QueryClient());
   const [trpcClient] = useState(() =>
     trpc.createClient({
       links: [
@@ -59,3 +59,4 @@ export function ClientProvider(props: { children: React.ReactNode }) {
     </trpc.Provider>
   );
 }
+

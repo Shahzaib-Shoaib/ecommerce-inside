@@ -7,6 +7,8 @@ import TrustCTA from "@/components/services/TrustCTA";
 import GalleySec from "@/components/services/GallerySec";
 import ServicesPackagesSec from "@/components/services/ServicesPackagesSec";
 
+
+
 export const metadata = {
   title: "Animation | Ecommerce Inside",
   description:

@@ -3,11 +3,7 @@
 import React, { FC, useEffect, useState } from "react";
 import packageCatagories from "@/data/packageCatagories";
 import packages from "@/data/packages";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, FreeMode } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/free-mode";
+import {Swiper,SwiperSlide, Navigation, FreeMode} from "@/components/ui/Slider";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 import PackageCard from "./PackageCard";
 import packagesGallery from "@/data/PackagesGallery";
@@ -39,8 +35,10 @@ const PortfolioPackages: FC = () => {
   const [filterImages, setFilterImages] = useState<PackagesGalleryType[]>([]);
 
   useEffect(() => {
-    setFilteredPackages(packages);
-    setFilterImages(packagesGallery);
+    const defaultPackages = packages.filter((data) => data.cat === "Combo");
+    setFilteredPackages(defaultPackages);
+    const defaultGallery = packagesGallery.filter((data) => data.cat === "Combo");
+    setFilterImages(defaultGallery);
   }, []);
 
   const changeCategorizedPackages = (
@@ -143,7 +141,7 @@ const PortfolioPackages: FC = () => {
 
       {/* Packages Cards */}
       <div className="div_container py-[20px]">
-        <div className="grid gap-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-3 4xl:grid-cols-3 5xl:grid-cols-3 6xl:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-3 4xl:grid-cols-3 5xl:grid-cols-3 6xl:grid-cols-3">
           {filteredPackages &&
             filteredPackages.map((singlePackage) => {
               return (

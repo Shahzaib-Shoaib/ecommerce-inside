@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import SwiperCore from "swiper";
-import {Autoplay,Pagination,A11y,useSwiper,Swiper,SwiperSlide} from "@/components/ui/Slider";
+import {Autoplay,A11y,useSwiper,Swiper,SwiperSlide} from "@/components/ui/Slider";
+import Image from "next/image";
 
 type ServicesData = {
   id: string;
@@ -15,7 +16,7 @@ type ServicesData = {
 
 const ServicesCardsSlider = ({ data }: { data: ServicesData }) => {
   
-  SwiperCore.use([Autoplay, Pagination, A11y]);
+  SwiperCore.use([Autoplay, A11y]);
   const swiper = useSwiper();
   return (
     <Swiper
@@ -24,7 +25,6 @@ const ServicesCardsSlider = ({ data }: { data: ServicesData }) => {
       autoplay={{
         delay: 5000,
       }}
-      pagination={{ clickable: true }}
       className="heroSlider"
     >
       <SwiperSlide key={"213"}>
@@ -56,10 +56,12 @@ const ServicesCardsSlider = ({ data }: { data: ServicesData }) => {
             style={{ backgroundImage: `url(/images/${service.img})` }}
           >
             <div className=" flex flex-col group-hover:hidden">
-              <img
+              <Image 
+                width={56} 
+                height={41}
                 src={`/images/${service.icon}`}
                 alt=""
-                className="h-[54px] w-[50px] pb-[15px] "
+                className="h-[56px] w-[56px] pb-[15px] "
               />
               <h3 className="md:text-base2 pb-[20px] text-h4 font-bold text-white">
                 {service.title}
@@ -67,7 +69,7 @@ const ServicesCardsSlider = ({ data }: { data: ServicesData }) => {
               <ul className="flex list-none flex-wrap">
                 {service.cat.map((catagory) => (
                   <li
-                    className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-400 first:border-l-0 first:pl-0"
+                    className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-900 first:border-l-0 first:pl-0"
                     key={catagory}
                   >
                     {catagory}
@@ -75,14 +77,14 @@ const ServicesCardsSlider = ({ data }: { data: ServicesData }) => {
                 ))}
               </ul>
             </div>
-            <div className="servie-para flex hidden flex-col group-hover:block">
+            <div className="servie-para hidden flex-col group-hover:block">
               <h5 className="md:text-base2 pb-[20px] text-p font-bold text-caribbeangreen">
                 {service.title}
               </h5>
               <ul className="flex list-none flex-wrap">
                 {service.cat.map((catagory) => (
                   <li
-                    className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-400 first:border-l-0 first:pl-0"
+                    className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-900 first:border-l-0 first:pl-0"
                     key={catagory}
                   >
                     {catagory}

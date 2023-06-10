@@ -4,7 +4,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import Image from "next/image";
 import Link from "next/link";
 import React, { FC, useState, useEffect } from "react";
-import navlinks from "@/data/navlinks";
+import navlinks from "@/data/navLinks";
 import { BiChevronDown } from 'react-icons/bi';
 import Button from "../ui/Button";
 import MobileMenu from "./MobileMenu";
@@ -12,7 +12,7 @@ import useRQGlobalState from "@/utils/useRQGlobalState";
 
 
 const Navbar: FC = () => {
-  const [modalActive, setModalActive] = useRQGlobalState("modal", false);
+  const [modalActive, setModalActive]:any = useRQGlobalState("modal", false);
 
   const [navColor, setNavColor] = useState(false);
   const changeNavColor = () => {

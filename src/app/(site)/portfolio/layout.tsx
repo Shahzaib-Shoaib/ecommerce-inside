@@ -1,4 +1,8 @@
-
+export const metadata = {
+  title: "Portfolio | Ecommerce Inside",
+  description:
+    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+};
 
 const PortfolioLayout = ({ children }: { children: React.ReactNode }) => {
   return (

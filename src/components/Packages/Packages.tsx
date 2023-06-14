@@ -24,7 +24,7 @@ const Packages: FC = () => {
   const [filteredPackages, setFilteredPackages] = useState<PackagesType[]>([]);
 
   useEffect(() => {
-    const defaultPackages = packages.filter((data) => data.cat === "Combo");
+    const defaultPackages = packages.filter((data) => data.cat === "Logo Design");
     setFilteredPackages(defaultPackages);
   }, []);
 

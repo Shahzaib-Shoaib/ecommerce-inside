@@ -10,7 +10,7 @@ import ServicesPackagesSec from "@/components/services/ServicesPackagesSec";
 export const metadata = {
   title: "Mobile Apps | Ecommerce Inside",
   description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 };
 
 type ServicesIntroSecType = {
@@ -177,7 +177,7 @@ const MobileApps: NextPage = () => {
     <div className="Animation-Page ">
       <Banner
         smallHeading={"Creative & Robust"}
-        mainHeading={"Mobile App Development Company in USA"}
+        mainHeading={"Mobile App Development Company in UAE"}
         bgImg={"/images/web-banner.webp"}
         img={"/images/mobile-banner-right.webp"}
         desc={

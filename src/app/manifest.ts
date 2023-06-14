@@ -4,7 +4,7 @@ const manifest = (): MetadataRoute.Manifest => {
   return {
     name: "Ecommerce Inside",
     short_name: "Ecommerce Inside",
-    description: "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    description: "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
     "theme_color": "#ffffff",
     "background_color": "#004740",
     "display": "fullscreen",

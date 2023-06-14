@@ -1,9 +1,15 @@
 "use client";
 import React, { FC } from "react";
-import Button from "./ui/Button";
-import { useForm } from "react-hook-form";
-import ErrorAlert from "./ui/ErrorAlert";
 import Image from "next/image";
+import { Form,  Input, Submit, Password, Phone, } from '@/components/ui/form';
+import schemas from '@/utils/schemas';
+
+const schema = schemas.object({
+  email: schemas.email,
+  password: schemas.password,
+  phone: schemas.phone,
+});
+
 
 type FormData = {
   name: string;
@@ -13,14 +19,12 @@ type FormData = {
 
 
 const GetStarted: FC = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
-  const onContact = (data:FormData) => {
-    console.log(data)
+
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+  const onContact = async (e) => {
+    await delay(5000);
+    console.log(e)
   }
 
   return (
@@ -75,7 +79,7 @@ const GetStarted: FC = () => {
               We’ve got budget-friendly solutions and flexible design packages
               that meet your needs.
             </p>
-            <form id="Get Started">
+            {/* <form id="Get Started">
               <div className="form-group">
                 <label>Your Name</label>
                 <input
@@ -129,7 +133,17 @@ const GetStarted: FC = () => {
                   Let's Get Started
                 </Button>
               </div>
-            </form>
+            </form> */}
+            <div className="form-group ">
+            <Form schema={schema} className='space-y-4 w-full max-w-sm absolute z-[999]' onSubmit={(e) => onContact(e)}>
+
+        <Input name='email' label='Email' placeholder='admin@admin.com' colorScheme="transparent" />
+        <Password name='password' label='Password' placeholder="********" colorScheme="transparent"/>
+        <Phone name='phone' label='Phone' placeholder="3046687731" colorScheme="transparent"/>
+        
+        <Submit label="Let's Get Started" />
+        </Form>
+            </div>
           </div>
         </div>
       </div>

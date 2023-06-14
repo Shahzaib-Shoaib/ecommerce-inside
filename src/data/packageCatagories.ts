@@ -5,82 +5,48 @@ const packageCatagories = [
   },
   {
     id: "2",
-    name: "Website Development",
+    name: "Website Design & Development",
   },
   {
     id: "3",
-    name: "Ecommerce Solutions",
+    name: "Ecommerce Website Development",
   },
   {
     id: "4",
-    name: "Animation",
+    name: "SEO Services",
   },
   {
     id: "5",
-    name: "Illustration",
+    name: "PPC & Social Media Advertising",
   },
   {
     id: "6",
-    name: "Marketing Collateral",
+    name: "Corporate Branding",
   },
   {
     id: "7",
-    name: "SEO",
+    name: "Graphic Design",
   },
   {
     id: "8",
-    name: "Digital Marketing",
+    name: "Social Media Management",
   },
   {
     id: "9",
-    name: "Creative Copywriting",
+    name: "Video Animation",
   },
   {
     id: "10",
-    name: "Combo",
+    name: "Copy Writing Services",
   },
-  // {
-  //   id: "11",
-  //   name: "Buisness Card",
-  // },
-  // {
-  //   id: "12",
-  //   name: "Stationery",
-  // },
-  // {
-  //   id: "13",
-  //   name: "Brochure & Flyer",
-  // },
-  // {
-  //   id: "14",
-  //   name: "Packaging & Label",
-  // },
-  // {
-  //   id: "15",
-  //   name: "Merchandising",
-  // },
-  // {
-  //   id: "16",
-  //   name: "Digitization",
-  // },
-  // {
-  //   id: "17",
-  //   name: "3D Logo Design and Animation",
-  // },
-  // {
-  //   id: "18",
-  //   name: "Video Animation",
-  // },
-
-  // { id: "19", name: "Search Engine Optimization" },
-  // {
-  //   id: "20",
-  //   name: "Social Media Management",
-  // },
-  // {
-  //   id: "21",
-  //   name: "Mobile Application",
-  // },
+  {
+    id: "11",
+    name: "YouTube Marketing",
+  },
+  {
+    id: "12",
+    name: "Combo Pakage",
+  }
 ];
 
 export default packageCatagories;

@@ -4,9 +4,15 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { IoClose } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
-import Button from "./ui/Button";
+// import Button from "./ui/Button";
 import useRQGlobalState from "@/utils/useRQGlobalState";
-import ErrorAlert from "./ui/ErrorAlert";
+// import ErrorAlert from "./ui/ErrorAlert";
+import { Form,  Input, Submit } from '@/components/ui/form';
+import schemas from '@/utils/schemas';
+
+const schema = schemas.object({
+  email: schemas.email,
+});
 
 type FormData = {
   email: string;
@@ -23,9 +29,11 @@ const ContactModal: FC = () => {
   // if(!visible) return null;
   if (!modalActive) return null;
 
-  const onContact = (data: FormData) => {
-    console.log(data);
-  };
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+  const onContact = async (e) => {
+    await delay(5000);
+    console.log(e)
+  }
 
   return (
     <Dialog.Root open={modalActive} onOpenChange={setModalActive}>
@@ -98,7 +106,7 @@ const ContactModal: FC = () => {
                 <p className="mb-2 font-medium uppercase text-white">
                   *OFFER IS AVAILABLE FOR A LIMITED TIME!
                 </p>
-                <form id="Get Started">
+                {/* <form id="Get Started">
                   <div className="form-group">
                     <label>Email Address</label>
                     <input
@@ -127,7 +135,12 @@ const ContactModal: FC = () => {
                       Let's Get Started
                     </Button>
                   </div>
-                </form>
+                </form> */}
+                <Form schema={schema} className='space-y-4 w-full max-w-sm ' onSubmit={(e) => onContact(e)}>
+
+<Input name='email' label='Email' placeholder='admin@admin.com' colorScheme="transparent" />
+<Submit label="Let's Get Started" />
+</Form>
               </div>
             </div>
           </div>

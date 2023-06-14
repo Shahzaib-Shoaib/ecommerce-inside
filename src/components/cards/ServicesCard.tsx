@@ -25,13 +25,13 @@ const ServicesCard = ({ service }: { service: ServicesDataType }) => {
           alt=""
           className="pb-[15px]"
         />
-        <h3 className="md:text-base2 pb-[20px] text-h4 font-bold text-white">
+         <h3 className="md:text-base2 w-[85%] pb-[20px] text-h4 font-bold text-white">
           {service.title}
         </h3>
         <ul className="flex list-none flex-wrap">
           {service.cat.map((catagory) => (
             <li
-              className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-900 first:border-l-0 first:pl-0"
+              className="mb-2 border-l border-gray-200 px-[6px] text-[12px] uppercase leading-4 text-white"
               key={catagory}
             >
               {catagory}
@@ -39,21 +39,23 @@ const ServicesCard = ({ service }: { service: ServicesDataType }) => {
           ))}
         </ul>
       </div>
-      <div className="servie-para   flex-col hidden group-hover:flex ">
-        <h3 className="md:text-base2 pb-[20px] text-h4 font-bold text-caribbeangreen">
+      <div className="servie-para   hidden flex-col group-hover:flex ">
+        <h3 className="md:text-base2 mb-3 text-[16px] font-bold leading-6 text-caribbeangreen">
           {service.title}
         </h3>
         <ul className="flex list-none flex-wrap">
           {service.cat.map((catagory) => (
             <li
-              className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-900 first:border-l-0 first:pl-0"
+              className="mb-2 border-l border-gray-200 px-[6px] text-[12px] uppercase leading-4 text-white"
               key={catagory}
             >
               {catagory}
             </li>
           ))}
         </ul>
-        <p className=" pt-3 text-sm text-white">{service.desc}</p>
+        <p className="mb-3 pt-3 text-[12px] leading-4 text-gray-300">
+          {service.desc}
+        </p>
         {/* <a href={service.link} className="text-sm text-caribbeangreen">
           Read More
         </a> */}

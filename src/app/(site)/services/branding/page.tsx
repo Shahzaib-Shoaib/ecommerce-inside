@@ -10,7 +10,7 @@ import ServicesPackagesSec from "@/components/services/ServicesPackagesSec";
 export const metadata = {
   title: "Branding | Ecommerce Inside",
   description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 };
 
 type ServicesIntroSecType = {
@@ -51,7 +51,7 @@ const Branding: NextPage = () => {
     points: [
       "Professionally designed marketing and branding collateral",
       "Consistently shares a brand story",
-      "One asset, multiple usages",
+      "One asset, multiple UAEges",
       "wide variety of formats",
       "Drives lead, sales and results",
       "Seamlessly flows with sales conversions",
@@ -233,7 +233,7 @@ const Branding: NextPage = () => {
     <div className="Branding-Page ">
       <Banner
         smallHeading={"Edge Cutting Branding Design"}
-        mainHeading={"Services the Best Branding Agency in USA is a Tap Away!"}
+        mainHeading={"Services the Best Branding Agency in UAE is a Tap Away!"}
         bgImg={"/images/web-banner.webp"}
         img={"/images/branding-banner-right.webp"}
         desc={

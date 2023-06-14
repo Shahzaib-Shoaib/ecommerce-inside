@@ -1,26 +1,43 @@
 "use client";
 import React, { useRef } from "react";
-import Button from "./ui/Button";
-import ErrorAlert from "./ui/ErrorAlert";
-import { useForm } from "react-hook-form";
-import packageCatagories from "@/data/packageCatagories";
+// import Button from "./ui/Button";
+// import ErrorAlert from "./ui/ErrorAlert";
+// import { useForm } from "react-hook-form";
+// import packageCatagories from "@/data/packageCatagories";
+
+import { Form,  Radio, Input, Phone, Select, Submit, Password, Checkbox, Textarea, File } from '@/components/ui/form';
+import schemas from '@/utils/schemas';
+
+const schema = schemas.object({
+  name:schemas.name,
+  email: schemas.email,
+  password: schemas.password,
+  phone: schemas.phone,
+  desc: schemas.desc,
+});
 
 const ContactForm = () => {
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm();
 
-  const onContact = (data: FormData) => {
-    console.log(data);
-  };
+  // const onContact = (data: FormData) => {
+  //   console.log(data);
+  // };
+
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+  const onContact = async (e) => {
+    await delay(5000);
+    console.log(e)
+  }
 
   return (
     <div className="contact-form">
-      <div className="personal gap-4 ">
-        <form id="Get Started" >
+      <div className="personal gap-4 py-4">
+        {/* <form id="Get Started" >
           <div className="relative mb-1 mt-6 border-2 border-darkgray p-2">
             <label className="absolute -top-[18px] left-4 bg-white px-[10px] py-[3px] text-[14px] font-medium text-darkblue">
               Your Name
@@ -126,7 +143,28 @@ const ContactForm = () => {
               Submit
             </Button>
           </div>
-        </form>
+        </form> */}
+        <Form schema={schema} className='space-y-4 w-full max-w-sm' onSubmit={(e) => onContact(e)}>
+        <Input name='name' label='Name' placeholder='Username' colorScheme='white'/>
+        <Input name='email' label='Email' placeholder='admin@admin.com' colorScheme='white'/>
+        <Phone name='phone' label='Phone' placeholder="3046687731" colorScheme="white"/>
+        <Select name='services' label='Services' placeholder="Service" colorScheme="white" options={[
+                  { value: "logodesign", label: "Logo & Identity" },
+                  { value: "websitedesign&development", label: "Website Design & Development" },
+                  { value: "ecommercewebsitedevelopment", label: "Ecommerce Website Development" },
+                  { value: "seoservices", label: "SEO Services" },
+                  { value: "ppc&socialmediaadvertising", label: "PPC & Social Media Advertising" },
+                  { value: "corporatebranding", label: "Corporate Branding" },
+                  { value: "graphicdesign", label: "Graphic Design" },
+                  { value: "socialmediamanagement", label: "Social Media Management" },
+                  { value: "videoanimation", label: "Video Animation" },
+                  { value: "copywritingservices", label: "Copy Writing Services" },
+                  { value: "youTubemarketing", label: "YouTube Marketing" },
+                  { value: "comboppakage", label: "Combo Pakage" },
+                ]}/> 
+                <Textarea name='desc' label='Description' placeholder={"Enter Description"}/>
+        <Submit label='Signup' />
+        </Form>
       </div>
     </div>
   );

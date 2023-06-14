@@ -12,7 +12,7 @@ import ServicesPackagesSec from "@/components/services/ServicesPackagesSec";
 export const metadata = {
   title: "Animation | Ecommerce Inside",
   description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 };
 
 type ServicesIntroSecType = {
@@ -212,7 +212,7 @@ const Animation: NextPage = () => {
     <div className="Animation-Page ">
       <Banner
         smallHeading={"Edge Cutting Animation"}
-        mainHeading={"Services the Best Animation Agency in USA is a Tap Away!"}
+        mainHeading={"Services the Best Animation Agency in UAE is a Tap Away!"}
         bgImg={"/images/animation-banner.webp"}
         img={"/images/animation-banner-right.webp"}
         desc={

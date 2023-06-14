@@ -2,8 +2,8 @@
     position: relative;
     overflow: hidden;
     transition: .5s all ease-in-out;
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 400px;
+    max-height: 400px;
     aspect-ratio: 1 / 1;
     box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
     margin: auto;
@@ -89,13 +89,11 @@
     opacity: 1;
 }
 
-
-
 .imgBox{
     height: 200px;
 }
 .imgBox img {
-    width: 320px;
-    height:320px;
+    width: 380px;
+    height:380px;
   object-fit: cover;
 }

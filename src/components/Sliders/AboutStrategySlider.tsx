@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
-import aboutStrategyData from "@/data/aboutstrategyData";
+import aboutStrategyData from "@/data/aboutStrategyData";
 import {Navigation,FreeMode,Swiper,SwiperSlide} from "@/components/ui/Slider";
 
 const AboutStrategySlider = () => {

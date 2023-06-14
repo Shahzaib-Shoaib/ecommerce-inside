@@ -10,7 +10,7 @@ import Button from "@/components/ui/Button";
 export const metadata = {
   title: "Digital Marketing | Ecommerce Inside",
   description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 };
 
 type ServicesIntroSecType = {
@@ -84,7 +84,7 @@ const DigitalMarketing: NextPage = () => {
     <div className="Animation-Page ">
       <Banner
         smallHeading={"Creative & Robust"}
-        mainHeading={"Digital Marketing Company in USA"}
+        mainHeading={"Digital Marketing Company in UAE"}
         bgImg={"/images/web-banner.webp"}
         img={"/images/mobile-banner-right.webp"}
         desc={

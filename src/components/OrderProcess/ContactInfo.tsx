@@ -14,9 +14,9 @@ const ContactInfo = () => {
             <BsTelephoneFill size={18} className=" text-darkblue" />
           </div>
           <div className="content">
-            <Link href={"tel:+971045916004"}>
+            <Link href={"tel:+971547956331"}>
             <p className="font-semibold uppercase text-darkblue">TOLL FREE:</p>
-            <p className="text-gray-500 ">+1 (734) 361 4340</p>
+            <p className="text-gray-500 ">+971 54 795 6331</p>
             </Link>
           </div>
         </div>

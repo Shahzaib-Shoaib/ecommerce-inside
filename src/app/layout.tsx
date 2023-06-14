@@ -14,7 +14,7 @@ const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
 });
-/*
+
  export const metadata = {
    title: {
      default: siteConfig.name,
@@ -64,7 +64,7 @@ const poppins = Poppins({
 //   //   "google-site-verification": "SCtCAdftAAE0UptAZAoIYsHnG7xbuN_ofCaHgfDyjn4", // Google Search Console Verification
 //   // },
 manifest: "manifest.webmanifest",
- };*/
+ };
 
 interface RootLayoutProps {
   children: ReactNode;

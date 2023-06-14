@@ -56,20 +56,20 @@ const ServicesCardsSlider = ({ data }: { data: ServicesData }) => {
             style={{ backgroundImage: `url(/images/${service.img})` }}
           >
             <div className=" flex flex-col group-hover:hidden">
-              <Image 
-                width={56} 
-                height={41}
-                src={`/images/${service.icon}`}
-                alt=""
-                className="h-[56px] w-[56px] pb-[15px] "
-              />
+            <Image 
+          width={56} 
+          height={56}
+          src={`/images${service.icon}`}
+          alt=""
+          className="pb-[15px]"
+        />
               <h3 className="md:text-base2 pb-[20px] text-h4 font-bold text-white">
                 {service.title}
               </h3>
               <ul className="flex list-none flex-wrap">
                 {service.cat.map((catagory) => (
                   <li
-                    className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-900 first:border-l-0 first:pl-0"
+                    className="border-l border-gray-400 px-[12px] text-xs uppercase text-white first:border-l-0 first:pl-0"
                     key={catagory}
                   >
                     {catagory}
@@ -84,7 +84,7 @@ const ServicesCardsSlider = ({ data }: { data: ServicesData }) => {
               <ul className="flex list-none flex-wrap">
                 {service.cat.map((catagory) => (
                   <li
-                    className="border-l border-gray-400 px-[12px] text-xs uppercase text-gray-900 first:border-l-0 first:pl-0"
+                    className="border-l border-gray-400 px-[12px] text-xs uppercase text-white first:border-l-0 first:pl-0"
                     key={catagory}
                   >
                     {catagory}

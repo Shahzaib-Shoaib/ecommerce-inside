@@ -12,7 +12,7 @@ const CopyRightFooter: FC = () => {
             {/* Footer Copyright Info */}
             <div className="footer_copyright_info flex flex-col items-center justify-center 2xl:flex-row 3xl:flex-row 4xl:flex-row 5xl:flex-row 6xl:flex-row my-1">
               <div className="copy_right">
-                <p className="text-darkgray text-center">&copy; {currentYear} Ecommerce Inside. All Rights Reserved.</p>
+                <p className="text-[#ABABAB] text-center">&copy; {currentYear} Ecommerce Inside. All Rights Reserved.</p>
               </div>
               <div className="flex items-center justify-center">
                 <Link href={"#"} className="text-white hover:text-caribbeangreen border-r border-white px-3">

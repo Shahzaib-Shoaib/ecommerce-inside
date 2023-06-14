@@ -9,12 +9,14 @@ import ServicesCard from "@/components/cards/ServicesCard";
 import Button from "@/components/ui/Button";
 import ServicesData from "@/data/ServicesData";
 import useRQGlobalState from "@/utils/useRQGlobalState";
+// import HeroSliderReact from "@/components/Sliders/HeroSliderReact";
 
 const Home: NextPage = () => {
   const [modalActive, setModalActive]:any = useRQGlobalState("modal", false);
   return (
     <div className="">
       <HeroSlider />
+      {/* <HeroSliderReact /> */}
 
       {/* Info Section */}
       <section className="overflow-hidden">
@@ -36,7 +38,7 @@ const Home: NextPage = () => {
           <p className="pb-[36px] text-center">
             A full service digital marketing platform that caters to every scope
             from marketing to the brand building along with a wide range of
-            latest IT solutions. We are rated as USA’s best digital marketing
+            latest IT solutions. We are rated as UAE’s best digital marketing
             agency for our swift deliveries and professionalism. We are a bunch
             of creative minds who think alike to make marketing goals and dreams
             come true. Our experts have over decades of industry experience as
@@ -58,7 +60,7 @@ const Home: NextPage = () => {
         <h2 className="pb-[10px] text-center">
           Ecommerce Inside Plans & Pricing
         </h2>
-        <h4 className="text-center font-normal text-[#666] ">
+        <h4 className="text-center font-normal text-darkgray">
           Affordable Price Packages
         </h4>
         <Packages />
@@ -76,7 +78,7 @@ const Home: NextPage = () => {
             Upscale and Leverage Brand Growth
           </h4>
           <h2 className="text-balack pb-[36px] text-center">
-            With the Digital Marketing Company in USA
+            With the Digital Marketing Company in UAE
           </h2>
           <p className="pb-[36px] text-center   text-darkgray">
             Allow us to take your brand to new heights with the ultra modern

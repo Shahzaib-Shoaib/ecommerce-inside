@@ -10,7 +10,7 @@ import ServicesPackagesSec from "@/components/services/ServicesPackagesSec";
 export const metadata = {
   title: "Creative Copywriting | Ecommerce Inside",
   description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 };
 
 type ServicesIntroSecType = {
@@ -52,7 +52,7 @@ const CreativeCopywriting: NextPage = () => {
       "Pack a punch through words",
       "Wide range of formats and tones",
       "Consistently shares a brand story",
-      "One asset, multiple usages",
+      "One asset, multiple UAEges",
       "Excellent eye for details",
       "Meeting strict deadlines",
       "Drives lead, sales and results",
@@ -94,7 +94,7 @@ const CreativeCopywriting: NextPage = () => {
       serviceName: "Blog Writing",
       serviceHeading: "Blog Writing",
       serviceDesc:
-        "Take advantage of our content generation services and lead search engines. Expedite your blog writing output to support your business's SEO goals. Of course, producing thousands of words with right idea and keywords, without the black hat and keyword stuffing can take hours – even days – not to mention the time spent publishing.",
+        "Take advantage of our content generation services and lead search engines. Expedite your blog writing output to support your business's SEO goals. Of course, producing thoUAEnds of words with right idea and keywords, without the black hat and keyword stuffing can take hours – even days – not to mention the time spent publishing.",
       servicePortfolio: [
         {
           id: "1",
@@ -123,7 +123,7 @@ const CreativeCopywriting: NextPage = () => {
       serviceName: "Press Release",
       serviceHeading: "Press Release",
       serviceDesc:
-        "Get your brand in front of thousands of daily visitors with immediate distribution to major websites and leading news sources. We realize that PR boils down to one fundamental quality – effective storytelling. Which is why we work hard on developing media relationships, after all, our success depends on our client's success.",
+        "Get your brand in front of thoUAEnds of daily visitors with immediate distribution to major websites and leading news sources. We realize that PR boils down to one fundamental quality – effective storytelling. Which is why we work hard on developing media relationships, after all, our success depends on our client's success.",
       servicePortfolio: [
         {
           id: "1",

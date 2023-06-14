@@ -18,8 +18,8 @@ const Head = () => {
         </div>
         <div className="logo flex gap-4 items-center w-fit">
           <button className="text-white border border-white rounded-md hover:text-darkblue hover:bg-white py-[10px] px-[20px]">Start Live Chat</button>
-          <Link href={"tel:+971045916004"} className="text-white border border-white bg-caribbeangreen rounded-md hover:text-white hover:bg-darkblue py-[10px] px-[20px]">
-          Call +1 (734) 361 4340
+          <Link href={"tel:+971547956331"} className="text-white border border-white bg-caribbeangreen rounded-md hover:text-white hover:bg-darkblue py-[10px] px-[20px]">
+          Call +971 54 795 6331
           </Link>
         </div>
       </div>

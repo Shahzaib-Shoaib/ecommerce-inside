@@ -10,7 +10,7 @@ import ServicesPackagesSec from "@/components/services/ServicesPackagesSec";
 export const metadata = {
   title: "Logo Design | Ecommerce Inside",
   description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 };
 
 type ServicesIntroSecType = {
@@ -43,7 +43,7 @@ const LogoDesign: NextPage = () => {
         The Market With Manifested Design
       </h3>
     ),
-    desc: "Being a top-notch design agency based in Pakistan, we create premium, everlasting, and powerful brand impressions having the power to define moments. We give your brand a unique, symbolic, yet iconic identity with a thoughtful name, timeless logo design, and captivating visual language. We take pride in shaping a clear brand identity that leaves a lasting and memorable imprint on the hearts and minds of its target customer.",
+    desc: "Being a top-notch design agency based in UAE, we create premium, everlasting, and powerful brand impressions having the power to define moments. We give your brand a unique, symbolic, yet iconic identity with a thoughtful name, timeless logo design, and captivating visual language. We take pride in shaping a clear brand identity that leaves a lasting and memorable imprint on the hearts and minds of its target customer.",
     mainpoint: "We love when our work becomes your brand story",
     img: "/images/ld-1.webp",
     points: [

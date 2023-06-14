@@ -3,7 +3,7 @@ const TwinColSliderData = [
         id:"1",
         projectType:"Branding Solutions",
         projectName:"ISi",
-        projectDesc:"ISi is company that makes waterproof speakers. We helped them with branding and making a website through which they sold thousands of units of their speaker.",
+        projectDesc:"ISi is company that makes waterproof speakers. We helped them with branding and making a website through which they sold thoUAEnds of units of their speaker.",
         caseStudyhref:"#",
         image:"/case-img-1.webp"
     },

@@ -10,7 +10,7 @@ import ServicesPackagesSec from "@/components/services/ServicesPackagesSec";
 export const metadata = {
   title: "Software Development | Ecommerce Inside",
   description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 };
 
 type ServicesIntroSecType = {
@@ -266,7 +266,7 @@ const SoftwareDevlopment: NextPage = () => {
     <div className="SoftwareDev-Page ">
       <Banner
         smallHeading={""}
-        mainHeading={"Revolutionary Software Development Company in USA"}
+        mainHeading={"Revolutionary Software Development Company in UAE"}
         bgImg={"/images/software-banner.webp"}
         img={"/images/software-banner-right.webp"}
         desc={

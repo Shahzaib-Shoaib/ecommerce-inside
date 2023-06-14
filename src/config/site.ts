@@ -15,7 +15,7 @@ import { env } from "@/env.mjs"
   
 export const siteConfig = {
   name: "Ecommerce Inside",
-  description: "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+  description: "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
   siteUrl: env.NEXT_PUBLIC_APP_URL,
   //ogImage: "https://react-three-learn.sameerjadav.me/og.png",
   author: {

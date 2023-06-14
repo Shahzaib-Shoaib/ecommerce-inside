@@ -52,8 +52,17 @@
   .heroRounded {
     @apply sm:rounded-br-[70px] md:rounded-br-[120px] lg:rounded-br-[120px] xl:rounded-br-[120px] 2xl:rounded-br-[120px] 3xl:rounded-br-[120px] 4xl:rounded-br-[200px] 5xl:rounded-br-[200px] 6xl:rounded-br-[200px] sm:pl-[20px] sm:pr-[30px] md:pl-[30px] md:pr-[40px] lg:pl-[40px] lg:pr-[50px] xl:pl-[40px] xl:pr-[50px]  2xl:pl-[40px] 2xl:pr-[50px] 3xl:pl-[40px] 3xl:pr-[50px] 4xl:pl-[30px] 4xl:pr-[50px] 5xl:pl-[30px] 5xl:pr-[70px] 6xl:pl-[50px] 6xl:pr-[90px] py-[30px]
   }
-}
-
+  @layer components {
+    .input,
+    .phone,
+    .select,
+    .radio,
+    .textarea {
+      @apply flex items-stretch w-full h-10 rounded-lg bg-green-50 duration-150;
+    }
+  }
+  }
+  
 
 :root {
   --dark-blue: #201949;
@@ -120,60 +129,3 @@
   -webkit-text-fill-color: white;
 }
 
-
-.form-group {
-  border: 2px solid #fff;
-  position: relative;
-  width: auto;
-  padding: 8px;
-}
-
-.form-group > label {
-  position: absolute;
-  top: -18px;
-  left: 20px;
-  padding: 5px 10px;
-  color: #fff;
-  font-weight: 500;
-  background: #261e35;
-}
-
-.form-group > input {
-  border: none;
-  background: transparent;
-  color: #fff;
-  min-height: 32px;
-}
-.form-group {
-  margin-top: 30px;
-  padding-top: 10px;
-}
-
-input[type]:focus {
-  box-shadow: none;
-  outline: none;
-}
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
-  opacity: 1; /* Firefox */
-}
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #fff;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #fff;
-}
-
-.arrowedList:before {
-  content: "\27A4";
-  margin-right: 11px;
-}
-
-input[required] + label:after {
-	content: '*';
-	color: red;
-  }

@@ -57,7 +57,7 @@ const PackageCard = ({ data }: { data: PackageType }) => {
           href={"tel:+17343614340"}
           className="text-p font-bold group-hover:text-white text-[18px]"
         >
-          +1 (734) 361 4340
+          +971 54 795 6331
         </Link>
       </div>
     </div>

@@ -13,7 +13,7 @@ const Agencies: FC = () => {
     <section className="overflow-hidden px-0">
       <div className="div_container">
         <h4 className="pb-[10px] text-center font-medium text-darkgray">
-          Top Digital Marketing Agencies in USA
+          Top Digital Marketing Agencies in UAE
         </h4>
         <h2 className="text-balack pb-[36px] text-center">
           Ecommerce Inside is a name of excellence, expertise, and

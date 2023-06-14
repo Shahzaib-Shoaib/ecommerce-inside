@@ -26,7 +26,7 @@ const ServicesData = [
         id:"13",
         icon: "/service-icon-3.webp",
         title: "Custom Web Development",
-        desc: "Ecommerce Inside is based in USA, UAE and has been serving prestigious clients on a large scale over a long period of time. Our clients speak for our credibility, professionalism, and work. Our experts develop fully customized websites for your businesses at the most affordable price tag.",
+        desc: "Ecommerce Inside is based in UAE, UAE and has been serving prestigious clients on a large scale over a long period of time. Our clients speak for our credibility, professionalism, and work. Our experts develop fully customized websites for your businesses at the most affordable price tag.",
         link: "#",
         img:"/service-img-3.webp",
         cat: ["ARCHITECT",

@@ -30,7 +30,7 @@ const HeroSlider: FC = () => {
       {heroSliderData?.map((slide, index) => (
         <SwiperSlide
           key={index}
-          style={{ backgroundImage: `url(/images${slide.url})` }}
+          style={{ backgroundImage: `url(${slide.url})` }}
           className="bg-cover"
         >
           <div className="absolute bottom-[50%] top-[25%]">
@@ -41,7 +41,7 @@ const HeroSlider: FC = () => {
               </p>
               <div className="banner_btn">
                 <Button variant="Dark" onClick={() => setModalActive(true)}>
-                  RequestQuote For Free
+                  Request Quote For Free
                 </Button>
               </div>
             </div>

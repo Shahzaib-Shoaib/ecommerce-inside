@@ -1,38 +1,23 @@
 import { NextPage } from "next";
 import PortfolioPackages from "@/components/Packages/PortfolioPackages";
+import Banner from "@/components/Banner";
 
 export const metadata = {
   title: "Portfolio | Ecommerce Inside",
   description:
-    "Ecommerce Inside is a full-service digital solutions agency based in USA specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
+    "Ecommerce Inside is a full-service digital solutions agency based in UAE specializing in branding designs, Software, Mobile Apps, Webs, & Marketing Solutions.",
 };
 
 const Portfolio: NextPage = () => {
   return (
     <div className="Contact-Page ">
-      <section className="portfolio-banner h-[60vh] w-full overflow-hidden bg-[url('/images/case-3-banner.webp')] bg-cover bg-center bg-no-repeat pt-[130px]">
-        <div className="div_container my-auto flex flex-col items-center justify-center px-[15px] 2xl:flex-row 3xl:flex-row 4xl:flex-row 5xl:flex-row 6xl:flex-row">
-          <div className="info w-[100%] text-white">
-            <h1 className="font-bold text-white">Live Life Loud</h1>
-            <p className="font-normal">
-              Life should be lived at full volume. That means getting your
-              friends together, turning up the music to full volume and dancing
-              all night to a clear, rich sound. With our new ISi range of
-              speakers, you can make the most of every single moment, power
-              parties you’ll remember forever, and always live your life out
-              loud.
-            </p>
-          </div>
-
-          <div className="banner-img flex items-center justify-end sm:hidden md:hidden lg:hidden xl:hidden">
-            <img
-              src="/images/case-3-banner-right.webp"
-              alt="portfolio-banner-img"
-              className="w-[80%]"
-            />
-          </div>
-        </div>
-      </section>
+       <Banner
+        smallHeading={"About Us"}
+        mainHeading={"Big Ideas Creative Team New Technology"}
+        bgImg={"/images/about-banner.webp"}
+        img={"/images/about-banner-right.webp"}
+        desc={null}
+      />
 
       <section className="overflow-hidden">
         <div className="div_container px-[15px]">

@@ -21,7 +21,7 @@ const Footer: FC = () => {
           </Link>
           <p className="py-4 text-white xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px]">
             Ecommerce Inside is a full-service digital solutions agency based in
-            USA specializing in branding designs, Software, Mobile Apps, Webs, &
+            UAE specializing in branding designs, Software, Mobile Apps, Webs, &
             Marketing Solutions.
           </p>
         </div>
@@ -55,7 +55,7 @@ const Footer: FC = () => {
             <li className="arrow_list relative my-2 text-white hover:text-caribbeangreen">
               <Link href={"#"} className="flex flex-col ml-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px]">
                 Web Development
-                <span className="text-[14px] text-darkgray">
+                <span className="text-[14px] text-[#ABABAB]">
                   eCommerce, Landing Page, Magento
                 </span>
               </Link>
@@ -63,7 +63,7 @@ const Footer: FC = () => {
             <li className="arrow_list relative my-2 text-white hover:text-caribbeangreen">
               <Link href={"#"} className="flex flex-col ml-2 ">
                 Mobile App Development
-                <span className="text-[14px] text-darkgray">
+                <span className="text-[14px] text-[#ABABAB]">
                   IOS, Andriod, Hybrid Applications
                 </span>
               </Link>
@@ -71,7 +71,7 @@ const Footer: FC = () => {
             <li className="arrow_list relative my-2 text-white hover:text-caribbeangreen">
               <Link href={"#"} className="flex flex-col ml-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px]">
                 Branding Agency
-                <span className="text-[14px] text-darkgray">
+                <span className="text-[14px] text-[#ABABAB]">
                   Logo Design, Social Media, Print Design
                 </span>
               </Link>
@@ -79,7 +79,7 @@ const Footer: FC = () => {
             <li className="arrow_list relative my-2 text-white hover:text-caribbeangreen">
               <Link href={"#"} className="flex flex-col ml-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px]">
                 Software Development
-                <span className="text-[14px] text-darkgray">
+                <span className="text-[14px] text-[#ABABAB]">
                   ERP, CMS, Web Applications, Cloud
                 </span>
               </Link>
@@ -87,7 +87,7 @@ const Footer: FC = () => {
             <li className="arrow_list relative my-2 text-white hover:text-caribbeangreen">
               <Link href={"#"} className="flex flex-col ml-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px]">
                 Digital Marketing Services
-                <span className="text-[14px] text-darkgray">
+                <span className="text-[14px] text-[#ABABAB]">
                   SEO, PPC, SMM, Email Marketing
                 </span>
               </Link>
@@ -102,28 +102,28 @@ const Footer: FC = () => {
             <li className=" relative my-2 text-white hover:text-caribbeangreen">
               <Link href={"/"} className="flex gap-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px] ">
                 <FaMapMarkerAlt size={16} className="text-caribbeangreen" />
-                Suit no 606, 6th floAl Khaleej Tower, Karachi, Pakistan
+                Suit no 606, 6th floAl Khaleej Tower, Karachi, UAE
               </Link>
             </li>
             <li className=" relative my-2 text-white hover:text-caribbeangreen">
               <Link href={"/"} className="flex gap-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px] ">
                 <FaMapMarkerAlt size={16} className="text-caribbeangreen" />
-                Ste 5148, 847 Sumpter Road, Belleville , Mi 48111 , USA
+                Ste 5148, 847 Sumpter Road, Belleville , Mi 48111 , UAE
               </Link>
             </li>
             <li className=" relative my-2 text-white hover:text-caribbeangreen">
-              <Link href={"tel:+971045916004"} className="flex gap-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px] ">
+              <Link href={"tel:+971547956331"} className="flex gap-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px] ">
                 <AiFillPhone size={16} className="text-caribbeangreen" />
-                +1 (734) 361 4340
+                +971 54 795 6331
               </Link>
             </li>
             <li className=" relative my-2 text-white hover:text-caribbeangreen">
               <Link
-                href={"mailto:info@ecommerceinside.co"}
+                href={"mailto:info@ecommerceinsideuae.com"}
                 className="flex gap-2 xl:text-[14px] 2xl:text-[14px] 3xl:text-[14px] "
               >
                 <MdEmail size={16} className="text-caribbeangreen" />
-                Email: info@ecommerceinside.co
+                Email: info@ecommerceinsideuae.com
               </Link>
             </li>
           </ul>

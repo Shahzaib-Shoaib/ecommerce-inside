@@ -4,7 +4,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import Image from "next/image";
 import Link from "next/link";
 import React, { FC, useState, useEffect } from "react";
-import navlinks from "@/data/navLinks";
+import navlinks from "@/data/navlinks";
 import { BiChevronDown } from 'react-icons/bi';
 import Button from "../ui/Button";
 import MobileMenu from "./MobileMenu";

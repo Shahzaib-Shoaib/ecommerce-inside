@@ -1,12 +1,13 @@
-"use client";
-import type { AppRouter } from "@/server/api/root";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { httpBatchLink, loggerLink } from "@trpc/client";
-import { createTRPCReact } from "@trpc/react-query";
-import { SessionProvider } from "next-auth/react";
-import { useState } from "react";
-import superjson from "superjson";
-import queryClient from "./client";
+'use client';
+import type { AppRouter } from '@/server/api/root';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { httpBatchLink, loggerLink } from '@trpc/client';
+import { createTRPCReact } from '@trpc/react-query';
+import { type Session } from 'next-auth';
+import { SessionProvider } from 'next-auth/react';
+import { useState } from 'react';
+import superjson from 'superjson';
+import RQqueryClient from './RQclient';
 
 export const trpc = createTRPCReact<AppRouter>({
   unstable_overrides: {
@@ -20,9 +21,9 @@ export const trpc = createTRPCReact<AppRouter>({
 });
 
 function getBaseUrl() {
-  if (typeof window !== "undefined")
+  if (typeof window !== 'undefined')
     // browser should use relative path
-    return "";
+    return '';
   if (process.env.VERCEL_URL)
     // reference for vercel.com
     return `https://${process.env.VERCEL_URL}`;
@@ -34,8 +35,14 @@ function getBaseUrl() {
   // assume localhost
   return `http://localhost:${process.env.PORT ?? 3000}`;
 }
-
-export function ClientProvider(props: { children: React.ReactNode }) {
+// props: { children: React.ReactNode }
+export function ClientProvider({
+  children,
+  session,
+}: {
+  children: React.ReactNode;
+  session: Session | null | undefined;
+}) {
   const [trpcClient] = useState(() =>
     trpc.createClient({
       links: [
@@ -50,13 +57,10 @@ export function ClientProvider(props: { children: React.ReactNode }) {
     })
   );
   return (
-    <trpc.Provider client={trpcClient} queryClient={queryClient}>
-      <QueryClientProvider client={queryClient}>
-        <SessionProvider>
-          {props.children}
-        </SessionProvider>
+    // <trpc.Provider client={trpcClient} queryClient={queryClient}>
+      <QueryClientProvider client={RQqueryClient}>
+        <SessionProvider session={session}>{children}</SessionProvider>
       </QueryClientProvider>
-    </trpc.Provider>
+    // </trpc.Provider>
   );
 }
-

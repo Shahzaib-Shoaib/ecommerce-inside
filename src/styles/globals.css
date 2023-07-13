@@ -3,129 +3,241 @@
 @tailwind utilities;
 
 @layer base {
-  h1,.h1 {
-    @apply font-bold 6xl:text-[42px] 6xl:leading-[52px] 5xl:text-[40px] 5xl:leading-[50px] 4xl:text-[38px] 4xl:leading-[48px] 3xl:text-[36px] 3xl:leading-[46px] 2xl:text-[34px] 2xl:leading-[44px] xl:text-[32px] xl:leading-[42px] lg:text-[32px] lg:leading-[42px] md:text-[20px] md:leading-[30px] sm:text-[30px] sm:leading-[40px]
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --purpule: 270, 69%, 60%;
+    --darkpurpule: 243, 46%, 9%;
+    --lightpurpule: 267, 68%, 60%;
+    --overlay: 258, 44%, 18%,  0.8;
+    --blue: 227, 100%, 62%;
+    --dark: 0, 0%, 20%;
+    --lightdark: 220, 11%, 21%;
+    --lightborder: 0, 0%, 84%;
+    --lighttext: 0, 0%, 60%;
+    --darktext: 0, 0%, 40%;
+    --garysec: 0, 3%, 94%;
+    --green: 158, 90%, 67%;
+    /* --purpule: #9952DF;
+    --blue: #3C65FF; */
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
   }
-  h2,.h2 {
-    @apply font-bold 6xl:text-[36px] 6xl:leading-[46px] 5xl:text-[34px] 5xl:leading-[44px] 4xl:text-[32px] 4xl:leading-[42px] 3xl:text-[30px] 3xl:leading-[40px] 2xl:text-[28px] 2xl:leading-[38px] xl:text-[26px] xl:leading-[36px] lg:text-[26px] lg:leading-[36px] md:text-[32px] md:leading-[40px] sm:text-[24px] sm:leading-[34px]
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
   }
-  h3,.h3 {
-    @apply font-semibold 6xl:text-[30px] 6xl:leading-[40px] 5xl:text-[28px] 5xl:leading-[38px] 4xl:text-[26px] 4xl:leading-[36px] 3xl:text-[24px] 3xl:leading-[34px] 2xl:text-[22px] 2xl:leading-[32px] xl:text-[20px] xl:leading-[30px] lg:text-[20px] lg:leading-[30px] md:text-[18px] md:leading-[28px] sm:text-[18px] sm:leading-[28px]
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-  h4,.h4 {
-    @apply font-semibold 6xl:text-[24px] 6xl:leading-[34px] 5xl:text-[22px] 5xl:leading-[32px] 4xl:text-[20px] 4xl:leading-[30px] 3xl:text-[18px] 3xl:leading-[28px] 2xl:text-[16px] 2xl:leading-[26px] xl:text-[16px] xl:leading-[26px] lg:text-[16px] lg:leading-[26px] md:text-[16px] md:leading-[26px] sm:text-[16px] sm:leading-[26px]
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
   }
-  h5,.h5 {
-    @apply text-[20px] leading-[30px] font-medium
+  h1,
+  .h1 {
+    @apply text-[32px] leading-[38px] sm:text-[32px] sm:leading-[38px] md:text-[34px] md:leading-[40px] lg:text-[37px] lg:leading-[45px] xl:text-[40px] xl:leading-[48px] 2xl:text-[40px] 2xl:leading-[48px];
   }
-  h6,.h6 {
-    @apply text-[16px] leading-[26px] font-medium
+  h2,
+  .h2 {
+    @apply text-[27px] leading-[32px] sm:text-[27px] sm:leading-[32px] md:text-[28px] md:leading-[34px] lg:text-[30px] lg:leading-[36px] xl:text-[32px] xl:leading-[38px] 2xl:text-[32px] 2xl:leading-[38px];
   }
-  p,.p {
-    @apply text-[16px] leading-[22px]
+  h3,
+  .h3 {
+    @apply text-[25px] leading-[30px] sm:text-[25px] sm:leading-[30px] md:text-[25px] md:leading-[30px] lg:text-[27px] lg:leading-[32px] xl:text-[28px] xl:leading-[34px] 2xl:text-[28px] 2xl:leading-[34px];
   }
-  span,.span {
-    @apply text-[16px] leading-[22px]
+  h4,
+  .h4 {
+    @apply text-[22px] leading-[27px] sm:text-[22px] sm:leading-[27px] md:text-[23px] md:leading-[27px] lg:text-[23px] lg:leading-[28px] xl:text-[24px] xl:leading-[29px] 2xl:text-[24px] 2xl:leading-[29px];
   }
-  a {
-    @apply text-[16px] leading-[22px]
+  h5,
+  .h5 {
+    @apply text-[20px] leading-[24px] sm:text-[20px] sm:leading-[24px] md:text-[20px] md:leading-[24px] lg:text-[20px] lg:leading-[24px] xl:text-[20px] xl:leading-[24px] 2xl:text-[20px] 2xl:leading-[24px];
   }
-  .btn {
-    @apply py-[10px] px-[30px]
+  h6,
+  .h6 {
+    @apply text-[16px] leading-[20px] sm:text-[16px] sm:leading-[20px] md:text-[16px] md:leading-[20px] lg:text-[16px] lg:leading-[20px] xl:text-[16px] xl:leading-[20px] 2xl:text-[16px] 2xl:leading-[20px];
   }
-  section {
-    @apply px-[15px] py-[50px] border-b border-[#ccc]
+  p,
+  .p {
+    @apply text-[16px] leading-[20px];
   }
-  .fluid_container {
-    @apply mx-auto flex flex-col items-center justify-center max-w-[1800px]  
-    /* sm:px-[15px]  md:px-[20px]  lg:px-[40px]  xl:px-[40px]  2xl:px-[40px]  3xl:px-[40px] 4xl:px-[100px]   5xl:px-[140px] 6xl:px-[140px] */
+  .small {
+    @apply text-[14px] leading-[18px];
   }
   .div_container {
     @apply max-w-[1200px] mx-auto
   }
-  .arrow_list {
-    @apply before:content-['\2023'] before:absolute before:text-[26px]  before:text-caribbeangreen before:-top-[10px] before:-left-3 
+  .gradient_text {
+    @apply  text-transparent bg-clip-text bg-gradient-to-r from-blue to-purpule max-w-fit
   }
-  .listTickColor {
-    @apply text-caribbeangreen
+  .fluid_container {
+    @apply px-[20px] md:px-[40px] lg:px-[40px] xl:px-[40px] 2xl:px-[40px]
   }
-  .heroRounded {
-    @apply sm:rounded-br-[70px] md:rounded-br-[120px] lg:rounded-br-[120px] xl:rounded-br-[120px] 2xl:rounded-br-[120px] 3xl:rounded-br-[120px] 4xl:rounded-br-[200px] 5xl:rounded-br-[200px] 6xl:rounded-br-[200px] sm:pl-[20px] sm:pr-[30px] md:pl-[30px] md:pr-[40px] lg:pl-[40px] lg:pr-[50px] xl:pl-[40px] xl:pr-[50px]  2xl:pl-[40px] 2xl:pr-[50px] 3xl:pl-[40px] 3xl:pr-[50px] 4xl:pl-[30px] 4xl:pr-[50px] 5xl:pl-[30px] 5xl:pr-[70px] 6xl:pl-[50px] 6xl:pr-[90px] py-[30px]
+  .banner-subheading {
+    @apply text-dark font-semibold text-[16px] sm:text-[16px]  md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] 
   }
-  @layer components {
-    .input,
-    .phone,
-    .select,
-    .radio,
-    .textarea {
-      @apply flex items-stretch w-full h-10 rounded-lg bg-green-50 duration-150;
-    }
+  .banner_mainheading {
+    @apply gradient_text font-extrabold text-[42px] leading-[50px] sm:text-[50px] sm:leading-[60px] sm:mb-[15px]  md:text-[50px] md:leading-[60px] md:mb-[15px] lg:text-[50px] lg:leading-[60px] lg:mb-[15px] xl:text-[50px] xl:leading-[60px] xl:mb-[15px] 2xl:text-[68px] 2xl:leading-[84px] 2xl:mb-[15px]
   }
+  .banner_description {
+    @apply font-normal text-lightdark text-[17px] leading-[25px] mb-[30px] sm:text-[17px] sm:leading-[18px] sm:mb-[30px]  md:text-[17px] md:leading-[25px] md:mb-[30px] lg:text-[17px] lg:leading-[25px] lg:mb-[30px] xl:text-[17px] xl:leading-[25px] xl:mb-[30px] 2xl:text-[20px] 2xl:leading-[26px] 2xl:mb-[50px]
   }
-  
+  .banner {
+    @apply flex items-center py-[50px] sm:py-[70px] md:py-[70px] lg:py-[70px] xl:py-[100px] 2xl:py-[100px]
+  }
 
-:root {
-  --dark-blue: #201949;
-  --black: #000;
-  --white: #fff;
-  --caribbeangreen: #0DE2A3;
-  --gray: #ebeaea;
+  .section {
+    @apply px-[16px] py-[40px] lg:py-[60px] xl:py-[60px] 2xl:py-[60px] 
+  }
+
+  .section-subheading {
+    @apply text-purpule font-semibold text-[18px] leading-[1.2] mb-[8px] lg:text-[24px] xl:text-[24px] 2xl:text-[24px]
+  }
+  .section_mainheading {
+    @apply  font-bold text-[26px] leading-[1.2] mb-5 lg:text-[50px] xl:text-[50px] 2xl:text-[50px]
+  }
+  .section_description {
+    @apply font-normal mb-7 text-darktext text-[16px] leading-[23px] 
+  }
+  .section_italic_description {
+    @apply   text-black italic font-semibold text-[16px] leading-[23px]
+  }
 }
 
-
-.swiper-pagination-bullet {
-  width: 24px !important;
-  height: 24px !important;
-  display: inline-block;
-  border: 5px;
-  border-color: white !important;
-  background: var(--swiper-pagination-bullet-inactive-color, #a3a3a3) !important;
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
-}
-.swiper-pagination-bullet:hover {
-  width: 24px !important;
-  height: 24px !important;
-  display: inline-block;
-  border: 5px;
-  border-color: white !important;
-  background: var(--caribbeangreen) !important;
-}
-
-.swiper-pagination-bullet-active {
-  /* --swiper-theme-color: var(--caribbeangreen) !important; */
-  width: 24px !important;
-  height: 24px !important;
-  display: inline-block;
-  border: 5px;
-  border-color: white !important;
-  background: var(--swiper-pagination-bullet-inactive-color, #0DE2A3) !important;
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
-}
+/* ------------------------------------------------------------ */
+/* Scroll Bar */
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--carribeanGreen) var(--gray);
+  scrollbar-color: hsl(var(--purpule)) hsl(var(--lightborder));
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--gray);
-  border-radius: 5px;
+  background: hsl(var(--lightborder));
+  border-radius: 2px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--caribbeangreen);
-  border-radius: 14px;
-  border: 3px solid var(--gray);
+  background-color: hsl(var(--purpule));
+  border: 1px solid hsl(var(--lightborder));
 }
 
-.strokeheading {
-  -webkit-text-stroke: 1px #16e2a5;
-  -webkit-text-fill-color: white;
+/* ------------------------------------------------------------ */
+
+/* Phone Field */
+.react-tel-input .form-control {
+  width: 100% !important;
+  border-radius: 0 !important;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-color: hsl(var(--purpule)) !important;
+  height: 40px;
+  background-color: transparent !important;
+}
+.react-tel-input input.form-control:hover {
+  border-color: hsl(var(--purpule)) !important;
 }
 
+.darkMode .react-tel-input .form-control, .darkMode .react-tel-input .form-control:focus {
+  color: white !important;
+}
+.whiteMode .react-tel-input .form-control, .whiteMode .react-tel-input .form-control:focus {
+  color: black !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border: none !important;
+  border-radius: 0 !important;
+  height: 95% !important;
+  top: 2% !important;
+  left: 0.3% !important;
+  background-color: transparent !important;
+
+}
+.react-tel-input .flag-dropdown:hover {
+  border-color: hsl(var(--purpule)) !important;
+  background-color: transparent !important;
+
+}
+.react-tel-input .flag-dropdown ul.country-list   {
+  margin-top: 0px !important;
+
+}
+
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus{
+  background-color: transparent !important;
+  border: 0;
+}
+
+
+/* ------------------------------------------------------------ */
+
+.SelectTrigger[data-placeholder] {
+  color: red !important;
+}

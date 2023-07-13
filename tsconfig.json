@@ -16,11 +16,20 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "noImplicitAny": false,
     "baseUrl": ".",
     "paths": {
-			"@/*": ["./src/*"]
-		},
+      "@/*": ["./src/*"],
+      "@/images/*": ["./public/images/*"],
+      "@/icons/*": ["./public/icons/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/ui/*": ["./src/components/ui/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/config/*": ["./src/config/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/content/*": ["./src/content/*"]
+    },
     "plugins": [
       {
         "name": "next"
@@ -34,12 +43,10 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    ".next/types/**/*.ts"
-, "next.config.js"  ],
-  "exclude": [ "node_modules" ],
-  // "ts-node": {
-	// 	"compilerOptions": {
-	// 		"module": "commonjs"
-	// 	}
-	// }
+    ".next/types/**/*.ts",
+    // "src/pages/index.tsxt",
+    "src/app/*",
+    "tailwind.config.ts"
+  ],
+  "exclude": ["node_modules"]
 }

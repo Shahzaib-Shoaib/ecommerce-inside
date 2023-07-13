@@ -1,210 +1,94 @@
-"use client";
-import Link from "next/link";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import ContactInfo from "@/components/OrderProcess/ContactInfo";
-import Button from "@/components/ui/Button";
-import ErrorAlert from "@/components/ui/ErrorAlert";
-import packages from "@/data/packages";
+'use client';
+import PackageCard from '@/components/Filters/PackageCard';
+import ClientOrderInfoForm from '@/components/Forms/ClientOrderInfoForm';
+import { Icons } from '@/components/Icons';
+import { packages } from '@/content/Packages';
+import { PackagesType, checkoutClientDataType } from '@/types';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 
 type paramsType = {
   packageId: string;
 };
 
-type PackageType = {
-  id: string;
-  name: string;
-  price: string;
-  discprice: string;
-  desc: string;
-  cat: string;
-  points: string[];
-}[];
-
-type orderDataType = {
-  Name: string;
-  email: string;
-  phone: string;
-  description: string;
-  category: string;
-  packageId: string;
-  packageName: string;
-  packagePrice: string;
-};
-
 const OrderPage = ({ params }: { params: paramsType }) => {
-  const [orderData, setOrderData] = useState<orderDataType>();
+  const [filteredPackages, setFilteredPackages] = useState<PackagesType>();
+  // const [clientData, setClientData] = useState<checkoutClientDataType>();
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
-  const orderPackage: PackageType = packages.filter((obj) => {
-    return obj.id === params.packageId;
-  });
+  useEffect(() => {
+    setFilteredPackages(packages.find((data) => data.id === params.packageId));
+  }, []);
 
-  const onContact = (data: FormData) => {
-    let formdata: orderDataType = {
-      Name: "",
-      email: "",
-      phone: "",
-      description: "",
-      category: "",
-      packageId: "",
-      packageName: "",
-      packagePrice: "",
-    };
-    
-    formdata.Name = data.name;
-    formdata.email = data.email;
-    formdata.phone = data.phone;
-    formdata.description = data.desc;
-    formdata.category = orderPackage[0]?.cat;
-    formdata.packageId = orderPackage[0]?.id;
-    formdata.packageName = orderPackage[0]?.name;
-    formdata.packagePrice = orderPackage[0]?.discprice;
+  // const getClientInfo = ({data}: {data:checkoutClientDataType}) => {
+  //   setClientData(data)
+  //   console.log(data)
+  // }
 
-    console.log(formdata)
-
-    const emailConfig = {
-      Username: 'fahadrazzaq41@gmail.com',
-      Password: '622924E192AD5C1C58A1A7610AB5BF2A71F4',
-      Host: 'smtp.elasticemail.com',
-      Port : 2525,
-      To : 'them@website.com',
-      From : formdata.email,
-      Subject : "Order from Ecommerce Inside",
-      Body : formdata
-  
-  }
-
-    if(window.Email) {
-      window.Email.send(emailConfig)
-    }
-  };
 
   return (
-    <div className="order_page">
-      <div className="grid grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-2">
-        {/* Package Card */}
-        <div className="card bg_white col-span-1 mx-auto max-w-[480px] rounded-md border border-caribbeangreen p-4 shadow-lg">
-          <h6 className="font-bold  text-darkblue">{orderPackage[0]?.name}</h6>
-          <div className="my-2 border-t-2"></div>
-          <h3 className="mb-2 font-bold text-caribbeangreen">
-            {orderPackage[0]?.discprice}
-          </h3>
-          {orderPackage[0]?.points.map((point, index) => (
-            <p className="my-1 font-normal text-darkblue" key={index}>
-              {point}
-            </p>
-          ))}
-          <div className="my-2 border-t-2"></div>
-          <Link href={"#"}>
-            <p className="text-center text-caribbeangreen">Click here to</p>
-            <h6 className="text-center  font-bold text-darkblue">Live Chat</h6>
-          </Link>
+    <div className="Order_page">
+      <section className="border-b border-b-lightborder px-4 py-10">
+        <div className="div_container ">
+          <h4 className="mb-4 text-center text-[24px] font-semibold leading-tight">
+            Let's Get Started with Your Project
+          </h4>
+          <p className="text-center text-[16px] leading-tight text-purpule">
+            Please Provide the information requested below.
+          </p>
         </div>
+      </section>
 
-        {/* Form */}
-        <div className="form col-span-1  px-4 ">
-          <h3 className="heading mb-6 font-normal text-darkblue">
-            Please Fill the Form
-          </h3>
+      <section className="section relative overflow-hidden">
+        <div className="div_container">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3">
+            {/* Package Info */}
+            <div className="package">
+              {filteredPackages && (
+                <PackageCard packageData={filteredPackages} checkout />
+              )}
+            </div>
 
-          <form id="Get Started">
-            <div className="relative mb-1 mt-6 border-2 border-darkgray p-2">
-              <label className="absolute -top-[18px] left-4 bg-white px-[10px] py-[3px] text-[14px] font-medium text-darkblue">
-                Your Name
-              </label>
-              <input
-                type="text"
-                className="form-control  w-full "
-                placeholder="Enter Your Name"
-                size={50}
-                {...register("name", {
-                  required: "Name is required",
-                  pattern: /^[A-Za-z]+$/i,
-                })}
-              />
+            {/* Client Info Form */}
+            <div className="client_info_form">
+              <ClientOrderInfoForm darkmode  />
+              {/* <ClientOrderInfoForm darkmode getClientInfo={getClientInfo}  /> */}
             </div>
-            {errors.name ? (
-              <ErrorAlert error={errors.name && "Please use Valid Name"} />
-            ) : null}
-            <div className=" relative mb-1 mt-6 border-2 border-darkgray p-2">
-              <label className="absolute -top-[18px] left-4 bg-white px-[10px] py-[3px] text-[14px] font-medium text-darkblue">
-                Email Address
-              </label>
-              <input
-                type="email"
-                className="form-control  w-full "
-                placeholder="Enter Your Email Address"
-                size={50}
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-                })}
-              />
+
+            {/* Assitance Info */}
+            <div className="assistance_info">
+              <h4 className="font-semibold text-purpule">Need</h4>
+              <h4 className="font-semibold text-black">Assistance?</h4>
+              <div className="icon_group mt-6 flex flex-row items-center gap-2">
+                <div className="icon_bg border-purpule flex h-12 w-12 items-center justify-center rounded-full border">
+                  <Icons.phone className="h-[18px] w-[18px]" />
+                </div>
+                <div className="content">
+                  <Link href={'tel:9378145702'}>
+                    <p className="font-semibold uppercase">
+                      TOLL FREE:
+                    </p>
+                    <p className="text-gray-500 ">937-814-5702</p>
+                  </Link>
+                </div>
+              </div>
+              <div className="icon_group mt-6 flex flex-row items-center gap-2">
+                <div className="icon_bg border-purpule flex h-12 w-12 items-center justify-center rounded-full border">
+                  <Icons.messageCircle className="h-6 w-h-6 text-blue" />
+                </div>
+                <div className="content">
+                  <Link href={'#'}>
+                    <p className="font-semibold uppercase">
+                      Live Chat:
+                    </p>
+                    <p className="text-gray-500 ">with Our Design Expert</p>
+                  </Link>
+                </div>
+              </div>
             </div>
-            {errors.email ? (
-              <ErrorAlert
-                error={errors.email && "Please use Correct email Address"}
-              />
-            ) : null}
-            <div className="relative mb-1 mt-6 border-2 border-darkgray p-2">
-              <label className="absolute -top-[18px] left-4 bg-white px-[10px] py-[3px] text-[14px] font-medium text-darkblue">
-                Phone No
-              </label>
-              <input
-                type="tel"
-                className="form-control  w-full "
-                placeholder="Enter Your Phone Number"
-                size={50}
-                {...register("phone", {
-                  required: "Phone No is required",
-                  pattern:
-                    /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
-                })}
-              />
-            </div>
-            {errors.phone ? (
-              <ErrorAlert
-                error={errors.phone && "Please use Correct Phone Number"}
-              />
-            ) : null}
-            <div className="relative mb-1 mt-6 border-2 border-darkgray p-2">
-              <label className="absolute -top-[18px] left-4 bg-white px-[10px] py-[3px] text-[14px] font-medium text-darkblue">
-                Description
-              </label>
-              <textarea
-                className="form-control  w-full border-none bg-transparent  text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-0"
-                placeholder="Enter Description"
-                cols={50}
-                rows={5}
-                {...register("desc", {
-                  required: "Description is required",
-                })}
-              />
-            </div>
-            {errors.desc ? (
-              <ErrorAlert error={errors.desc && "Please Write Description"} />
-            ) : null}
-            <div className="mt-[20px]">
-              <Button
-                variant="Green"
-                className=""
-                onClick={handleSubmit(onContact)}
-              >
-                Submit
-              </Button>
-            </div>
-          </form>
+          </div>
         </div>
-
-        {/* Contact Info */}
-        <ContactInfo />
-      </div>
+      </section>
     </div>
   );
 };
